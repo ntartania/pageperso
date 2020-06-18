@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+
+body { word-wrap:break-word; }
+
+/* Make sure scaled-down images look good in IE */
+img { -ms-interpolation-mode: bicubic; }
+
+
+* { 
+	margin:0px;
+	padding:0px;
+}
+
+body {
+	font-family: Georgia, Times, serif;
+	font-size:86%;
+	background-color:#fff;
+	color:#111;
+	line-height:1.6;
+}
+
+a {
+	color:#03f;
+}
+
+img {
+	border:0px #000 none;
+}
+
+
+ul{
+	list-style-type:square;
+	padding-left:24px;
+}
+
+dt {
+	font-style: italic;
+}
+
+
+.red {
+	color:#d05;
+	font-weight: bold;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align : center;
+}
+
+#iframe-container {
+	margin-left:245px;
+	margin-top: 1.5em;
+	border-top: 1px solid #bbb;
+	width: 800px;
+}
+
+#hautpage {
+	margin-left:245px;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	width: 800px;
+}
+
+#sublinks {
+	margin-left:245px;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	width: 800px;
+}
+
+
+#ipynb {
+	height: 100%;
+	width: 800px;
+}
+
+
+/*
+SIDEBAR & CALLOUTS
+*/
+body.allow-sidebar {
+	margin-left:245px;
+	padding-top:1px;
+}
+#sidebar {
+	margin-top:10px;
+	margin-left:1.5em;
+	width:230px;
+	float:left;
+	
+}
