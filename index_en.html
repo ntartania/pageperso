@@ -190,7 +190,7 @@
 											<p>
 												In terms of <a href="javascript:void(0)" onclick="navigate('enseignement');" title="Teaching">teaching</a>, I am in charge of the main programming course offered at UQO. I've taught it every fall and winter term since Winter 2019, and I'm constantly trying to improve my teaching and evaluation techniques. I've also taught a Programming Langages course.
 												<br/>
-												At the graduate level, I'm preparing a course called distributed AI, about every aspect of agent interactions. It will be about multi-agent systems, social machines, game theory, social choice theory, and multi-agent learning. 
+												At the graduate level, I'm preparing a course called <i>Distributed AI</i>, about every aspect of agent interactions. It will be about multi-agent systems, social machines, game theory, social choice theory, and multi-agent learning. 
 											</p>
 											<h4>&nbsp;&nbsp;&nbsp;To work with me</h4>
 											<p> 
@@ -213,9 +213,150 @@
 								<h2 class="title"><span class="in">Research</span></h2>
 								<div class="article-content">
 									<div class="RichTextElement">
-										<div><p>My main topics of research are related to the engineering of social machines: multi-agent systems where agents are mostly people. Social machines live mostly on the Web, but I’m very interested in decentralization, so I’m also very interested in alternative architectures, including peer-to-peer systems and ad-hoc networks.</p><p><em>(page under construction)</em></p>
+										<div>
+											<p>
+												My research is mainly about the interactions of agents and / or people in computing systems.
+												I'm interested in distributed systems from a multi-agent standpoint; distributed systems often mean decentralized control over distributed data, and I'm interested on how this data can be accessed and in issues of trust. I'm also interested in so-called <em>social machines</em>, where people and agents interact through computational systems. I am particularly interested in ethical dimensions of these interactions. I work with game theory, protocols, and I like building systems that work and do interesting things. 
+											</p>
+
+											<h3>&quot;Sociogrammes&quot; project</h3>
+										<a id="toggler1" href="javascript:void(0)" onclick="toggle_visibility('rech1', 'toggler1');">(show)</a>
+										<div id="rech1" style="display: none">
+											<br/>
+											<h4>Background :</h4>
+											<p>
+												A <em>social machine</em> [1] is a socio-technical system consisting of networked applications and their users. Many web and mobile applications generate social machines, such as Wikipedia, Twitter, Strava, Tinder, Waze, peer-to-peer networks, networked games like Pokemon go, etc. 
+											</p>
+											<p>
+												Some social machines make use of existing systems (social networks, in particular): see for example the hashtag <b>#icanhazpdf</b>, which is used to coordinate the distribution of paywalled science papers.
+											</p>
+
+											<h4>Purpose:</h4>
+											<p>
+												The goal of this project is to democratize the creation of social machines, through a visual language that would allow novices to schematically describe a social interaction, and a system to automatically transform such a schema (a "sociagramme") into a functional infrastructure using existing applications (twitter messages, doodle polls, etc.).
+											</p>
+											<p>
+												The proposed work follows a project initiated with researchers from the Universities of Edinburgh and Oxford (SOCIAM project), and the basic ideas are described in two articles published in 2018 [2, 3].
+											</p>
+
+											<h4>Possible research topics:</h4>
+											<ul>
+											<li>
+ 												Implementing and evaluating a 'sociagram' editor, which allows schemas to be drawn and saved in a format to be defined. The prototypes presented in [3] can be used as a starting point for the visual application.
+ 											</li>
+ 											<li>
+ 												Transform "sociagrams" into a functional social machine, using the model-driven development (MDD) approach. An important objective is to exploit as much as possible existing applications (Twitter, Slack, Doodle...) and combine them with simple agents.
+ 											</li>
+											<li>
+												Case study: creating a social machine for a real use case. One possibility is to create a decentralized wiki following the ideas of [4] (two prototypes exist, one in PHP is a Moodle extension, the other is a simple Ruby on Rails web application.
+											</li>
+										</ul>
+										<p>
+											These topics can be treated at different levels of depth and be appropriate for an essay, a master's degree or a PhD (a PhD would probably combine all three). 
+										</p>
+
+										</p>
+											<p class="MsoNormal">[1] Smart, P. R., &amp; Shadbolt,
+											N. R. (2015). Social machines. In Encyclopedia of Information Science and
+											Technology, Third Edition (pp. 6855-6862). IGI Global.</p>
+											<p class="MsoNormal">[2] Papapanagiotou, P., Davoust, A., Murray-Rust, D.,
+											Manataki, A., Van Kleek, M., Shadbolt, N., &amp; Robertson, D. (2018, July).
+											Social Machines for All. In Proceedings of the 17th International Conference on
+											Autonomous Agents and MultiAgent Systems (pp. 1208-1212). International Foundation
+											for Autonomous Agents and Multiagent Systems.<a href="https://www.research.ed.ac.uk/portal/files/64020044/social_machines_for_all_AAMAS2018.pdf">(pdf)</a></p>
+											<p class="MsoNormal">[3] Murray-Rust, D., Davoust, A., Papapanagiotou, P.,
+											Manataki, A., Van Kleek, M., Shadbolt, N., &amp; Robertson, D. (2018, June). <span style="">Towards executable representations
+											of social machines. In International Conference on Theory and Application of
+											Diagrams (pp. 765-769). Springer, Cham.<a href="https://www.research.ed.ac.uk/portal/files/64020594/towards_executable_representations_of_social_machines_DIAGRAMS2018.pdf">(pdf)</a></span></p>
+
 										</div>
-									</div>
+											<h3>Project: Social contracts for autonomous agents</h3>
+											<a id="toggler2" href="javascript:void(0)" onclick="toggle_visibility('rech2', 'toggler2');">(show)</a>
+										<div id="rech2" style="display: none"> 
+											<br/>
+											<h4>Background:</h4>
+											<p>
+												The interaction of rational agents can be modelled by non-cooperative games, in the sense of game theory. 
+												It is usually assumed that the outcome of the game will be a Nash equilibrium in the game. In many cases, Nash equilibria are inefficient, i.e. the sum of the utilities obtained by the players in equilibrium is less than the utility that could be obtained by the optimal (joint) action.
+											</p>
+											<h4>Purpose:</h4>
+											<p>
+												This project explores mechanisms for modifying games to encourage more efficient or desirable equilibria. There are several aspects to this project. First, there is a social choice problem: assuming that agents are dissatisfied with an existing game, they have to choose together how this game should be modified: for example, it can be modified to generate the maximum utility, or to distribute the utility as fairly as possible (for various definitions of fairness).
+											</p>
+											<p> 
+												Our first study on the topic [4] has shown that any game can be modified by redistributing the payoffs, so that the total utility produced by the game is optimal, and the players rationally prefer the modified game to the original. On the other hand, for any other objective than maximal utility, there will be games where this is not feasible.
+											</p>
+											<p>
+												In future work we would like to implement transformation algorithms and to experiment with learning agents. We would also like to explore connections to cooperative game theory and bargaining.
+											</p>
+											<h4>Possible research topics:</h4>
+											<ul>
+												<li>
+													Theoretical study of the social choice problem of choosing modifications to a game. 
+												</li>
+												<li>
+													Theoretical study: how does this approach relate to relevant concepts from cooperative game theory (kernel) and/or partition function form games.
+												</li>
+												<li>
+													Practical case study with agents using multi-agent (reinforcement) learning.
+												</li>
+												<li>
+													Feasibility study: implementing a social contract using smart contracts on blockchain.
+												</li>
+											</ul>
+											<p> 
+												These topics can be treated at different levels of depth and are appropriate for an essay, a master's degree or a PhD. A PhD in this field requires a solid theoretical background.<br/>
+											</p>
+
+											<p class="MsoNormal">[4] Davoust,A. and Rovatsos, M.: Social Contracts for Non-Cooperative Games. AIES 2020: 43-49.<a href="https://www.research.ed.ac.uk/portal/files/132375526/Social_Contracts_for_DAVOUST_DOA06122019_AFV.pdf">(pdf)</a></span></p>
+											<!--<p class="MsoNormal">[1] <span style="font-family: Arial, sans-serif; color: rgb(34, 34, 34); background-color: white;">paper 1</span></p>
+											<p class="MsoNormal">[2] paper 2</p>
+											<p class="MsoNormal">[3] paper 3</p>-->
+
+										</div>
+										<h3>Project: Graph queries for the Semantic Web</h3>
+										<a id="toggler3" href="javascript:void(0)" onclick="toggle_visibility('rech3', 'toggler3');">(afficher)</a>
+										<div id="rech3" style="display: none"> <br/>
+											<h4>Contexte :</h4>
+											<p>The Semantic Web, the Linked Data on the Web movement, are movements to promote the sharing of data on the Web, mainly in RDF format.  Graph formats such as RDF are the preferred format for knowledge representation. One of the fundamental mechanisms of graph queries is the traversal of edges following paths matching regular expressions -- Regular Path Queries (RPQs). A number of techniques have been proposed to evaluate RPQ queries in a centralised context, and a few have been proposed for distributed databases. </p>
+										
+											<h4>Goal</h4>
+											<p> 
+											In this project we want to evaluate graph queries in the contexte of the Semantic Web.
+											</p>
+
+											<h4>Possible research topics:</h4>
+											<ul>
+												<li>Adapting existing techniques to SPARQL property path (PP) queries.</li>
+											<li>Experimental evaluation of graph modeling techniques to assess the cost of web requests. (extension of [7])</li>
+											<li>Adding PP queries to existing SPARQL / Semantic Web benchmarks.</li>
+											<li>
+											Application of graph query evaluation techniques to security. See [5]. The project would consist in replicating these results and collaborating with a researcher in cryptography to try to obtain them using private multi-party computing [6] </li></ul>
+
+											<p>These subjects may be more appropriate for a essay or master's degree. For a PhD, I'm open to discuss directions for expanding these projects.</p>
+
+											<p class="MsoNormal">[5] Chen, H., Dean, D., & Wagner, D. A. (2004, February). Model Checking One Million Lines of C Code. In NDSS (Vol. 4, pp. 171-185).</p>
+											<p class="MsoNormal">[6] Goldwasser, S. (1997, August). Multi party computations: past and present. In Proceedings of the sixteenth annual ACM symposium on Principles of distributed computing (pp. 1-6). ACM.</p>
+											<p class="MsoNormal">[7] Davoust, A., &amp; Esfandiari, B. (2016, October). Processing regular path queries on arbitrarily distributed data. In OTM Confederated International Conferences" On the Move to Meaningful Internet Systems" (pp. 844-861). Springer, Cham.</p>
+										</div>
+										<h3>Project: Decentralised Collaboration for note-taking</h3>
+										<a id="toggler4" href="javascript:void(0)" onclick="toggle_visibility('rech4', 'toggler4');">(afficher)</a>
+										<div id="rech4" style="display: none"> <br/>
+											<h4>Background:</h4>
+											<p>Today many students use computers or tablets to take notes in class. However, this practice has changed very little in the past years, despite the potential of collaborative editing software to improve the students' experience. </p>
+											<p>One of the reasons for this could be that existing collaborative tools all implement the same collaboration model, where everyone edits a shared document, and there is only one version of the document, "one size fits all", whereas by taking their own notes, students get customized educational material. Teachers' experiences demonstrate weaknesses in the shared document model: it can be difficult to motivate students to participate, and they may also be uncomfortable editing, and thus destroying, text written by others. The difficulty for students to participate could be explained, in game theory, by the similarity of the situation with the classic "snowdrift game": if participating is costly, and the benefit may come from the work of others, then the rational attitude is to passively wait for others to work.
+ 											</p>
+
+											<h4>Goal:</h4> 
+											<p> In this project we aim to develop a collaborative editing tool (similar to a Wiki) where participants can benefit from collaboration while maintaining a personalized version of the resulting document?</p>
+											<p> We are currently developing this tool, implementing the "decentralized collaboration model" proposed in my PhD [8]. We will trial it in the fall term at UQO, then possibly in online courses (MOOC).
+											</p>
+											<p>We are also developing an implementation purely in the browser, supported by peer-to-peer browser-to-browser connections.</p>
+
+											<p class="MsoNormal">[8] Davoust, A., Craig, A., Esfandiari, B. &amp;Kazmierski, V. (2015). <span style="">P2Pedia: a peer-to-peer wiki for decentralized collaboration. Concurrency and Computation: Practice and Experience.<a href="_Media/Davoust_et_al-2015-Concurrency_and_Computation__Practice_and_Experience.pdf">(pdf)</a></span></p>
+										</div>
+										</div>
+									</div> <!-- /rich text element -->
 								</div> <!-- /article-content -->
 								<div class="article-info">
 								</div> <!-- /article-info -->
@@ -224,7 +365,25 @@
 								<h2 class="title"><span class="in">Teaching</span></h2>
 								<div class="article-content">
 									<div class="RichTextElement">
-										<div><p>INF1563 Programmation I (Hiver 2019, Automne 2019)</p></div>
+										<div><h3>INF1563 Programmation I </h3>
+											<p>
+											Introductory programming course using Java, taught every Fall and winter term.
+
+											Course material using Jupyter Notebooks (in French, still under development) <a href="cours/inf1563.html">here</a>.
+											</p>
+											<h3>INF4083 Langages de Programmation</h3> 
+											<p>Programming Languages course: taught Winter 2020. <br/>
+											I am still working on the development of my lecture notes, which I will publish once ready.
+											</p>
+											<h3>INFXXXX Intelligence Artificielle Distribuée</h3> 
+											<p>A new course under development. This will be a multi-agent systems course, focusing on theories and tools to model and study the interactions between agents:
+												<ul><li> Models of agent communities (formal protocols, electronic institutions, ...) and the concept of a social machine.</li>
+													<li>Some game theory, social choice theory, mechanism design</li>
+													<li> Multi-agent Learning</li>
+												</ul>
+											</p>
+
+										</div>
 									</div>
 								</div> <!-- /article-content -->
 								<div class="article-info">
