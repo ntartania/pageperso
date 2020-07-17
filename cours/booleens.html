@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>conditions-solExos</title>
+<title>booleens</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13077,38 +13077,54 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Instructions-Conditionnelles:-solutions-aux-exercices">Instructions Conditionnelles: solutions aux exercices<a class="anchor-link" href="#Instructions-Conditionnelles:-solutions-aux-exercices">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercice-1">Exercice 1<a class="anchor-link" href="#Exercice-1">&#182;</a></h4><p>Le code suivant permet à l'utilisateur d'entrer deux nombres. Ajouter une instruction conditionnelle <code>if</code> pour que le programme affiche ensuite <strong>le plus grand des deux nombres</strong>.</p>
+<h1 id="Instructions-Conditionnelles:-suite">Instructions Conditionnelles: suite<a class="anchor-link" href="#Instructions-Conditionnelles:-suite">&#182;</a></h1><h2 id="Expressions-bool&#233;ennes">Expressions bool&#233;ennes<a class="anchor-link" href="#Expressions-bool&#233;ennes">&#182;</a></h2><p>Dans les exemples précédents nous avons utilisé des conditions toujours très simples, portant sur une seule variable. En programmation il est souvent nécessaire de manipuler des conditions plus complexes, qui peuvent se calculer à l'aide d'expressions similaires aux expressions arithmétiques vues au tout début du cours.</p>
+<p>Pour ceci on utilise des variables, valeurs, et expressions du type <code>boolean</code>. Dans ce notebook on va explorer ce type en détail.</p>
+<p>Tout comme les types <code>int</code> et <code>double</code> sont utilisés pour les informations numériques, le type <code>boolean</code> est utilisé pour des informations "logiques" qui peuvent être seulement vraies ou fausses.</p>
+<p>On a déjà vu des expressions booléennes, créées à partir de valeurs (ou variables) numériques, comme par exemple les suivantes:</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[1]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
-<span class="n">Scanner</span> <span class="n">clavier</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrer deux nombres séparés d&#39;un espace:&quot;</span><span class="p">);</span>
-<span class="kt">double</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
-<span class="kt">double</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
-<span class="kt">double</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="n">n1</span><span class="o">&gt;</span><span class="n">n2</span><span class="p">){</span>
-    <span class="n">max</span> <span class="o">=</span> <span class="n">n1</span><span class="p">;</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="n">max</span> <span class="o">=</span> <span class="n">n2</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Le plus grand des deux nombres est: &quot;</span> <span class="o">+</span> <span class="n">max</span><span class="p">);</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+<span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span>
 </pre></div>
 
     </div>
@@ -13121,46 +13137,27 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Entrer deux nombres séparés d&#39;un espace:
-32 -5
-Le plus grand des deux nombres est: 32.0
-</pre>
-</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false</pre>
 </div>
 
 </div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercice-2">Exercice 2<a class="anchor-link" href="#Exercice-2">&#182;</a></h4><p>Supposons qu'un autobus passe toutes les heures dans une certaine rue, 12 minutes après l'heure: 0h12, 1h12, 2h12, etc.</p>
-<p>Modifier le programme ci-dessous qui demande l'heure à l'utilisateur, puis affiche le nombre de minutes à attendre pour l'autobus.</p>
-<p>Indication: le calcul est différent selon si il est plus ou moins de 12 minutes après l'heure.</p>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Quelle heure est-il? (heures puis minutes)&quot;</span><span class="p">);</span>
-<span class="kt">int</span> <span class="n">heures</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-<span class="kt">int</span> <span class="n">minutes</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-<span class="kt">int</span> <span class="n">temps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">minutes</span><span class="o">&gt;</span><span class="mi">12</span><span class="p">){</span>
-    <span class="n">temps</span> <span class="o">=</span> <span class="mi">72</span> <span class="o">-</span> <span class="n">minutes</span><span class="p">;</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="n">temps</span> <span class="o">=</span> <span class="mi">12</span> <span class="o">-</span> <span class="n">minutes</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;L&#39;autobus arrive dans %d minutes.&quot;</span><span class="p">,</span> <span class="n">temps</span><span class="p">);</span>
+<div class=" highlight hl-java"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="mi">2</span>
 </pre></div>
 
     </div>
@@ -13170,18 +13167,6 @@ Le plus grand des deux nombres est: 32.0
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Quelle heure est-il? (heures puis minutes)
-16 17
-L&#39;autobus arrive dans 55 minutes.</pre>
-</div>
-</div>
 
 <div class="output_area">
 
@@ -13191,7 +13176,7 @@ L&#39;autobus arrive dans 55 minutes.</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>java.io.PrintStream@67d84ce2</pre>
+<pre>false</pre>
 </div>
 
 </div>
@@ -13203,40 +13188,8 @@ L&#39;autobus arrive dans 55 minutes.</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercice-3">Exercice 3<a class="anchor-link" href="#Exercice-3">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrer un nombre:&quot;</span><span class="p">);</span>
-<span class="kt">double</span> <span class="n">nombre</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="n">nombre</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="p">){</span>
-    <span class="n">absolue</span> <span class="o">=</span> <span class="n">nombre</span><span class="p">;</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="n">absolue</span> <span class="o">=</span> <span class="o">-</span> <span class="n">nombre</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La valeur absolue du nombre est: &quot;</span> <span class="o">+</span> <span class="n">absolue</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Ici le code est incomplet: la variable absolue n'a pas été déclarée. La question est: où la déclarer pour que le programme fonctionne correctement?</p>
-<p>Réponse:<br>
-<strong>(a) ligne 3</strong><br>
-<s>(b) ligne 5</s><br>
-<s>(c) ligne 5 et ligne 7</s></p>
+<p>Pour les trois expressions précédentes, le seul opérateur utilisé est un opérateur de <em>comparaison</em>, qui nous permet d'obtenir des informations vraies ou fausses. Comme on le voit dans les sorties, les seules valeurs correspondant au type booléen sont <code>true</code> et <code>false</code>.</p>
+<p>On peut écrire des expressions plus complexes en utilisant les opérateurs arithmétiques aussi; les opérateurs de comparaison ont alors la précédence "minimale" : les comparaisons sont effectuées en dernier, et leur résultat est booléen:</p>
 
 </div>
 </div>
@@ -13246,16 +13199,7 @@ L&#39;autobus arrive dans 55 minutes.</pre>
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrer un nombre:&quot;</span><span class="p">);</span>
-<span class="kt">double</span> <span class="n">nombre</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
-<span class="kt">double</span> <span class="n">absolue</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">nombre</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="p">){</span>
-    <span class="n">absolue</span> <span class="o">=</span> <span class="n">nombre</span><span class="p">;</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="n">absolue</span> <span class="o">=</span> <span class="o">-</span> <span class="n">nombre</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La valeur absolue du nombre est: &quot;</span> <span class="o">+</span> <span class="n">absolue</span><span class="p">);</span>
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span> <span class="mi">3</span>
 </pre></div>
 
     </div>
@@ -13268,77 +13212,15 @@ L&#39;autobus arrive dans 55 minutes.</pre>
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Entrer un nombre:
--12.12
-La valeur absolue du nombre est: 12.12
-</pre>
-</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercice-4">Exercice 4<a class="anchor-link" href="#Exercice-4">&#182;</a></h4><p>On souhaite diagnostiquer le risque lié à l'obésité selon le sexe et le tour de taille d'un patient.
-On a deux variables: <code>sexe</code>: 'M' ou 'F' et <code>tourDeTaille</code>: le tour de taille en cm.</p>
-<p>Le diagnostic est le suivant: pour un homme, on déclare la personne à risque si son tour de taille dépasse 102cm, et pour une femme, la limite est de 88cm.</p>
-<p><strong>Modifier</strong> le programme suivant pour afficher l'un des deux messages "Le patient est à risque" ou "Le patient n'est pas à risque" selon son sexe et son tour de taille. Tel qu'il est, il diagnostique tous les hommes comme étant à risque.</p>
-<p><strong>Indication:</strong> utiliser des <code>if</code> imbriqués: un <code>if-else</code> portant sur le sexe, et à l'intérieur de chaque bloc un nouveau <code>if</code> portant sur le tour de taille.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrez le sexe (M ou F) du patient suivi de son tour de taille en cm:&quot;</span><span class="p">);</span>
-<span class="kt">char</span> <span class="n">sexe</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">//cet appel de fonction renvoie le premier caractère du String lu au clavier</span>
-<span class="kt">int</span> <span class="n">tourDeTaille</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-
-<span class="k">if</span> <span class="p">(</span><span class="n">sexe</span><span class="o">==</span><span class="sc">&#39;M&#39;</span><span class="p">){</span>     <span class="c1">//------- hommes</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">tourDeTaille</span> <span class="o">&gt;</span> <span class="mi">102</span><span class="p">){</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Le patient est à risque&quot;</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Le patient n&#39;est pas à risque&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>            <span class="c1">//------- femmes</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">tourDeTaille</span> <span class="o">&gt;</span> <span class="mi">88</span><span class="p">){</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La patiente est à risque&quot;</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La patiente n&#39;est pas à risque&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Entrez le sexe (M ou F) du patient suivi de son tour de taille en cm:
-F 98
-La patiente est à risque
-</pre>
-</div>
 </div>
 
 </div>
@@ -13348,8 +13230,14 @@ La patiente est à risque
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercice-5">Exercice 5<a class="anchor-link" href="#Exercice-5">&#182;</a></h4><p>Dans le programme suivant, l'utilisateur entre la température d'une eau de baignade, en degrés Celcius. Si cette température est inférieure à 0, le programme affiche un message "l'eau est gelée!".</p>
-<p><strong>Compléter le programme</strong> pour afficher des messages différents selon la température. Si la température est entre 0 et 12, afficher un message "l'eau est trop froide", si elle est entre 12 et 20, afficher "prenez votre combinaison pour vous baigner", et enfin si la température est au-dessus de 20, afficher "tous à l'eau!".</p>
+<p>En Java les opérateurs de comparaison sont:</p>
+<ul>
+<li>Inégalités strictes <code>&gt;</code> et <code>&lt;</code>, </li>
+<li>Inégalités larges <code>&gt;=</code> et <code>&lt;=</code>, </li>
+<li>Égalité <code>==</code> (remarquer la différence avec l'opéerateur d'affectation <code>=</code>)</li>
+<li>Différence <code>!=</code> (signifie: non-égal)</li>
+</ul>
+<p>Les inégalitées sont applicables seulement aux nombres, et au type <code>char</code>, qui peut être directement converti en nombre. On ne peut pas, en revanche, les utiliser pour les <code>String</code>:</p>
 
 </div>
 </div>
@@ -13359,17 +13247,485 @@ La patiente est à risque
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrez la température de l&#39;eau:&quot;</span><span class="p">);</span>
-<span class="kt">int</span> <span class="n">temperature</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<div class=" highlight hl-java"><pre><span></span><span class="sc">&#39;f&#39;</span> <span class="o">&gt;</span> <span class="sc">&#39;b&#39;</span>
+</pre></div>
 
-<span class="k">if</span> <span class="p">(</span><span class="n">temperature</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;L&#39;eau est gelée&quot;</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">temperature</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;L&#39;eau est trop froide.&quot;</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">temperature</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Prenez votre combinaison pour vous baigner.&quot;</span><span class="p">);</span>
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="s">&quot;hamster&quot;</span> <span class="o">&lt;</span> <span class="s">&quot;rhinoceros&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">&#34;hamster&#34; &lt; &#34;rhinoceros&#34;</span>
+<span class="ansi-red-intense-fg ansi-bold">bad operand types for binary operator &#39;&lt;&#39;</span>
+<span class="ansi-red-intense-fg ansi-bold">  first type:  java.lang.String</span>
+<span class="ansi-red-intense-fg ansi-bold">  second type: java.lang.String</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>les opérateurs "égal" et "différent" s'appliquent à tous les types. Dans tous les cas, quelque soit le type des opérandes, le résultat est toujours de type <code>boolean</code>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="sc">&#39;f&#39;</span> <span class="o">==</span> <span class="sc">&#39;b&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="s">&quot;chameau&quot;</span> <span class="o">!=</span> <span class="s">&quot;dromadaire&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mais attention! En général, <strong>il ne faut pas</strong> utiliser les comparaisons <code>==</code> et <code>!=</code> avec des chaînes de caractères (même si ça compile), à cause de la façon dont celles-ci sont stockées en mémoire (ce sont des <em>objets</em>, comme on le verra plus tard). Ces comparaisons fonctionnent souvent très bien, mais le jour où une ne fonctionne pas correctement, le bug peut être assez difficile à trouver:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+<span class="n">Scanner</span> <span class="n">clavier</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="n">String</span> <span class="n">nom</span> <span class="o">=</span> <span class="s">&quot;Jane&quot;</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">nom2</span> <span class="o">=</span> <span class="s">&quot;Ja&quot;</span><span class="o">+</span><span class="s">&quot;ne&quot;</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrer une valeur pour nom3&quot;</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">nom3</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Entrer une valeur pour nom3
+Jane
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Voyons les valeurs de nos trois variables <code>nom</code>, <code>nom2</code>, <code>nom3</code>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">nom</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Jane</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">nom2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Jane</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">nom3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Jane</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Et les comparaisons...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">nom</span> <span class="o">==</span> <span class="n">nom2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">nom</span> <span class="o">==</span> <span class="n">nom3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">nom2</span> <span class="o">!=</span> <span class="n">nom3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Variables-bool&#233;ennes">Variables bool&#233;ennes<a class="anchor-link" href="#Variables-bool&#233;ennes">&#182;</a></h2><p>De même que pour les autres types, on peut enregistrer une information de type booléen dans une variable. Le type Java correspondant est <code>boolean</code>, et comme pour les autres types, il faut déclarer les variables avant de les utiliser:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">boolean</span> <span class="n">positif</span><span class="p">;</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">positif</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ici on a mis des parenthèses pour une meilleure lisibilité, et l'affectation a enregistré le résultat de la comparaison dans le variable booléenne <code>positif</code>.</p>
+<p>On peut ensuite lire cette valeur:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">positif</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>... et l'utiliser dans un <code>if</code>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">positif</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x est positif!&quot;</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tous à l&#39;eau !&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x est négatif!&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -13387,9 +13743,688 @@ La patiente est à risque
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Entrez la température de l&#39;eau:
+<pre>x est positif!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Attention</strong>: ici on a enregistré le <em>résultat</em> de la comparaison dans la variable <code>positif</code>,  et non pas la comparaison elle-même. Ça veut dire que si on change maintenant la valeur de <code>x</code> et que la nouvelle valeur est négative, la variable <code>positif</code> n'est pas recalculée:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span><span class="p">;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">positif</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>À noter que ce fonctionnement est exactement le même que pour les variables et expressions numériques.</p>
+<h3 id="Constantes-bool&#233;ennes">Constantes bool&#233;ennes<a class="anchor-link" href="#Constantes-bool&#233;ennes">&#182;</a></h3><p>Comme on l'a indiqué plus haut et vu dans les exemples, les seules valeurs possibles pour des valeurs ou expressions booléennes sont <code>true</code> et <code>false</code>.</p>
+<p>Comme pour des nombres, on peut utiliser ces valeurs dans le code:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">boolean</span> <span class="n">repetition</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On voit aussi souvent les valeurs <code>true</code> et <code>false</code> apparaitre dans les conditions:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Bonjour!&quot;</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">repetition</span><span class="o">==</span><span class="kc">true</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Encore Bonjour!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Bonjour!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mais ce code est parfaitement équivalent à:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Bonjour!&quot;</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">repetition</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Encore Bonjour!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Bonjour!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Il faut bien comprendre que la comparaison <code>repetition==true</code> est exécutée et produit comme résultat <code>true</code> ou <code>false</code>, et le résultat est <code>true</code> si la variable <code>repetition</code> elle-même est <code>true</code>... on peut donc remplacer <code>repetition==true</code> par <code>repetition</code>, le résultat est parfaitement identique.</p>
+<p>On peut s'en convaincre:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">repetition</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">repetition</span><span class="o">==</span><span class="kc">true</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Op&#233;rateurs-bool&#233;ens">Op&#233;rateurs bool&#233;ens<a class="anchor-link" href="#Op&#233;rateurs-bool&#233;ens">&#182;</a></h2><p>Jusqu'ici on a vu comment obtenir des valeurs booléennes en comparant des valeurs numériques (ou textuelles) à l'aide des opérateurs <code>&gt;</code>, <code>&lt;=</code>, etc.</p>
+<p>On va maintenant voir comment combiner des valeurs booléennes à l'aide des principaux opérateurs booléens: <em>ET</em>, <em>OU</em> et <em>NON</em>, notées en Java <code>&amp;&amp;</code>, <code>||</code> et <code>!</code> respectivement.</p>
+<h3 id="ET">ET<a class="anchor-link" href="#ET">&#182;</a></h3><p>L'opérateur <em>ET</em>, la <em>conjonction</em>, s'écrit en Java <code>&amp;&amp;</code>. Le sens de cet opérateur est intuitif: <strong>(A ET B)</strong> est vrai si et seulement si (<strong>A</strong> est vrai) <em>et</em> (<strong>B</strong> est vrai):</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[28]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Remarque: pour indiquer qu'une variable est dans un intervalle, comme par exemple: <code>0 &lt; x &lt; 10</code>, en Java il faut écrire les deux inégalités séparément:</p>
+<p><code>(0 &lt; x) &amp;&amp; (x &lt; 10)</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="OU">OU<a class="anchor-link" href="#OU">&#182;</a></h3><p>L'opérateur <em>OU</em>, la <em>disjonction</em>, s'écrit en Java <code>||</code>. Le sens de cet opérateur est intuitif: <strong>(A OU B)</strong> est vrai si et seulement si (<strong>A</strong> est vrai) <em>ou</em> (<strong>B</strong> est vrai):</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="n">x</span> <span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[29]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[30]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">y</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[31]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="NON">NON<a class="anchor-link" href="#NON">&#182;</a></h3><p>L'opérateur <em>NON</em>, la <em>négation</em>, s'écrit en Java <code>!</code>. C'est un opérateur unaire: il s'applique à un seul opérande et renvoie son "inverse" logique: si <strong>A</strong> est vrai, alors <strong>NON A</strong> est faux, et inversement:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[32]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="o">!</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[33]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[34]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="o">!</span><span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[35]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>D'ailleurs, une fois armés de la négation, on peut aussi éviter d'écrire des conditions de la forme <code>if(repetition == false)...</code>: on peut simplement écrire: <code>if (!repetition)...</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Expressions-bool&#233;ennes-(maintenant-avec-des-op&#233;rateurs-bool&#233;ens-!!)">Expressions bool&#233;ennes <em>(maintenant avec des op&#233;rateurs bool&#233;ens !!)</em><a class="anchor-link" href="#Expressions-bool&#233;ennes-(maintenant-avec-des-op&#233;rateurs-bool&#233;ens-!!)">&#182;</a></h3><p>La présentation des opérateurs booléens <em>ET</em>, <em>OU</em>, <em>NON</em> suggère qu'ils sont assez faciles à comprendre. Mais leur utilisation peut poser des difficultés: c'est une compétence qui demande de la pratique.</p>
+<p>En premier lieu, il faut être capable de traduire une explication informelle en Français en contraintes logiques sur des variables.</p>
+<h4 id="Exemple">Exemple<a class="anchor-link" href="#Exemple">&#182;</a></h4><p>On veut écrire une expression booléenne pour exprimer que l'entier <code>x</code> <em>n'est pas dans l'intervalle [0-10]</em> (où 0 et 10 sont dans l'intervalle):</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrer x:&quot;</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span><span class="mi">10</span><span class="p">)</span> <span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x n&#39;est pas dans l&#39;intervalle&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Entrer x:
 17
-Prenez votre combinaison pour vous baigner.
+x n&#39;est pas dans l&#39;intervalle
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pour dire que x n'est pas dans l'intervalle, on a exprimé que x était soit plus petit que la borne inférieure de l'intervalle (0) soit supérieur à la borne supérieure. Ceci se traduit par un <strong>OU</strong>: x est négatif <strong>OU</strong> plus grand que 10.</p>
+<p>On aurait pu exprimer la même condition en exprimant la condition que <code>x</code> <em>est dans l'intervalle</em>, puis prendre la négation de cette condition:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">x</span> <span class="o">&lt;=</span><span class="mi">10</span><span class="p">)</span> <span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x n&#39;est pas dans l&#39;intervalle&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>x n&#39;est pas dans l&#39;intervalle
 </pre>
 </div>
 </div>
@@ -13403,13 +14438,46 @@ Prenez votre combinaison pour vous baigner.
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Remarques:</p>
 <ul>
-<li>l'énoncé ne précise pas suffisamment clairement les intervalles pour choisir entre inégalités structes et larges</li>
-<li>chaque condition dans l'énoncé spécifie un intervalle, mais comme on est chaque fois dans le <code>else</code> du <code>if</code> précédent, on n'a pas besoin de spécifier le minimum de l'intervalle (par exemple pour l'intervalle 12 - 20 on spécifie seulement t &lt; 20, parce que t &gt;=12 est obtenu par le else précédent (t &lt; 12 est faux)</li>
-<li>le <code>else</code> final recouvre toutes les températures possibles qui ne rentre dans aucun des cas précédents</li>
+<li>la valeur de <code>x</code> est la même que précédemment</li>
+<li>comme 0 et 10 sont <em>dans</em> l'intervalle, pour écrire que <code>x</code> est en-dehors de l'intervalle on utilise des inégalités <em>strictes</em>, alors qu'en exprimant la condition que <code>x</code> est <em>dans</em> l'intervalle, il faut utiliser des inégalités <em>larges</em>. </li>
+<li>Ceci est parfaitement équivalent à une expression où on écrit que <code>x</code> est dans l'intervalle, et on écrit que cette condition est fausse avec <code>==false</code>:</li>
 </ul>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">x</span> <span class="o">&lt;=</span><span class="mi">10</span><span class="p">)</span><span class="o">==</span><span class="kc">false</span> <span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x n&#39;est pas dans l&#39;intervalle&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>x n&#39;est pas dans l&#39;intervalle
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13429,44 +14497,44 @@ Prenez votre combinaison pour vous baigner.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrer x, suivi d&#39;un espace puis y&quot;</span><span class="p">);</span>
-<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
 <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
 
-<span class="k">if</span> <span class="p">(</span> <span class="n">x</span><span class="o">==</span><span class="mi">3</span> <span class="o">||</span> <span class="n">x</span><span class="o">==</span><span class="mi">5</span> <span class="p">){</span> <span class="c1">// condition 1</span>
+<span class="k">if</span> <span class="p">(</span> <span class="kc">false</span> <span class="p">){</span> <span class="c1">// remplacer false par la condition 1</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La condition 1 est vraie.&quot;</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La condition 1 est fausse.&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">x</span><span class="o">!=</span><span class="n">y</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">x</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">x</span><span class="o">==</span><span class="n">y</span><span class="p">)</span> <span class="p">){</span> <span class="c1">// condition 2</span>
+<span class="k">if</span> <span class="p">(</span> <span class="kc">false</span> <span class="p">){</span> <span class="c1">// condition 2</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La condition 2 est vraie.&quot;</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La condition 2 est fausse.&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="k">if</span> <span class="p">(</span> <span class="n">x</span><span class="o">!=</span><span class="n">y</span> <span class="o">&amp;&amp;</span> <span class="n">y</span><span class="o">!=-</span><span class="n">x</span> <span class="p">){</span> <span class="c1">// condition 3</span>
+<span class="k">if</span> <span class="p">(</span> <span class="kc">false</span> <span class="p">){</span> <span class="c1">// condition 3</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La condition 3 est vraie.&quot;</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La condition 3 est fausse.&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="k">if</span> <span class="p">(</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">x</span><span class="o">&gt;</span><span class="n">y</span> <span class="p">){</span> <span class="c1">// condition 4</span>
+<span class="k">if</span> <span class="p">(</span> <span class="kc">false</span> <span class="p">){</span> <span class="c1">// condition 4</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La condition 4 est vraie.&quot;</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La condition 4 est fausse.&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="k">if</span> <span class="p">(</span> <span class="n">x</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">x</span><span class="o">&lt;=</span><span class="mi">800</span> <span class="o">&amp;&amp;</span> <span class="n">y</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">y</span><span class="o">&lt;=</span><span class="mi">600</span> <span class="p">){</span> <span class="c1">// condition 5</span>
+<span class="k">if</span> <span class="p">(</span> <span class="kc">false</span> <span class="p">){</span> <span class="c1">// condition 5</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La condition 5 est vraie.&quot;</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La condition 5 est fausse.&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="k">if</span> <span class="p">(</span> <span class="n">y</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">y</span><span class="o">&lt;=</span><span class="mi">100</span> <span class="o">&amp;&amp;</span> <span class="n">x</span><span class="o">&gt;=</span><span class="mi">350</span> <span class="o">&amp;&amp;</span> <span class="n">x</span><span class="o">&lt;=</span><span class="mi">450</span> <span class="p">){</span> <span class="c1">// condition 6</span>
+<span class="k">if</span> <span class="p">(</span> <span class="kc">false</span> <span class="p">){</span> <span class="c1">// condition 6</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La condition 6 est vraie.&quot;</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La condition 6 est fausse.&quot;</span><span class="p">);</span>
@@ -13488,15 +14556,174 @@ Prenez votre combinaison pour vous baigner.
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Entrer x, suivi d&#39;un espace puis y
--5 56
+-10 45
 La condition 1 est fausse.
-La condition 2 est vraie.
-La condition 3 est vraie.
+La condition 2 est fausse.
+La condition 3 est fausse.
 La condition 4 est fausse.
 La condition 5 est fausse.
 La condition 6 est fausse.
 </pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La deuxième compétence essentielle est de pouvoir <em>interpréter</em> une condition booléenne. Ceci permet de se relire, et de trouver les erreurs quand il y en a...</p>
+<h4 id="Exemple">Exemple<a class="anchor-link" href="#Exemple">&#182;</a></h4><p>On considère le code suivant, qui définit trois variables <code>condition1, condition2, condition3</code>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+<span class="kt">boolean</span> <span class="n">condition1</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">);</span>
+
+<span class="kt">boolean</span> <span class="n">condition2</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">&amp;&amp;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="kt">boolean</span> <span class="n">condition3</span> <span class="o">=</span> <span class="p">(</span><span class="n">condition2</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="o">!</span><span class="n">condition1</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Quelle est la valeur (true / false) de chaque condition?</p>
+<p>Prenons-les une à une:</p>
+<ul>
+<li><code>condition1</code>: les conditions (x &gt;0) et (y&lt;10) sont toutes deux vraies, donc la conjonction des deux est vraie. On vérifie:</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">condition1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[42]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>condition2</code>: on commence par la partie gauche de l'expression, entre parenthèses: la première des deux est fausse, donc la conjonction est fausse. Ensuite, la partie droite: cette condition est vraie: x est pair. On a donc <code>false</code> <strong>OU</strong> <code>true</code>: il suffit qu'une des deux soit vraie. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">condition2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[43]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>condition3</code>: cette fois condition3 est définie en fonction des deux précédentes. <code>condition2</code> est vraie, et comme <code>condition1</code> est vraie aussi, sa négation <code>(!condition1)</code> est fausse. On a donc <code>true</code> <strong>ET</strong> <code>false</code>: comme l'une des deux est fausse, la conjonction est fausse aussi:</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">condition3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[44]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false</pre>
+</div>
+
 </div>
 
 </div>
@@ -13526,17 +14753,17 @@ La condition 6 est fausse.
 <tr>
 <td>41</td>
 <td>100</td>
-<td><code>true</code></td>
+<td></td>
 </tr>
 <tr>
 <td>10</td>
 <td>10</td>
-<td><code>false</code></td>
+<td></td>
 </tr>
 <tr>
 <td>66</td>
 <td>72</td>
-<td><code>false</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
