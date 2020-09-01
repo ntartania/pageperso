@@ -13220,20 +13220,15 @@ Bonjour
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span> 
-<span class="p">}</span>
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>for (int i=1; i&lt;=10; ++i){
+    System.out.println(i);
+}</p>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13245,7 +13240,7 @@ Bonjour
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">20</span><span class="p">;</span> <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">){</span>
@@ -13302,7 +13297,7 @@ Bonjour
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span> 
@@ -13355,7 +13350,7 @@ Bonjour
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span> 
@@ -13400,7 +13395,7 @@ Bonjour
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercice-6:-trouver-la-racine-enti&#232;re-d'un-nombre:">Exercice 6: trouver la racine enti&#232;re d'un nombre:<a class="anchor-link" href="#Exercice-6:-trouver-la-racine-enti&#232;re-d'un-nombre:">&#182;</a></h4><p>On veut trouver la racine carrée d'un nombre <em>n</em>, si elle est entière. Pour ceci, on va simplement parcourir l'intervalle [0, n] et tester chaque nombre pour voir si il donne <em>n</em> quand on l'élève au carré. Si on ne trouve pas de racine entière, on affichera un message indiquant cela.</p>
+<h4 id="Exercice-6:-D&#233;terminer-si-un-nombre-est-premier">Exercice 6: D&#233;terminer si un nombre est premier<a class="anchor-link" href="#Exercice-6:-D&#233;terminer-si-un-nombre-est-premier">&#182;</a></h4><p>Comment détermine-t-on un si un nombre n est premier? On cherche dans l'intervalle [2, n/2 ] un diviseur de n. Si on en trouve un, alors on sait que n n'est pas premier. Si on en trouve un, alors on sait que n est premier.</p>
 <p><em>Solution</em> :</p>
 
 </div>
@@ -13408,7 +13403,67 @@ Bonjour
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Scanner</span> <span class="n">clavier</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">nombre</span><span class="p">;</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrer un entier supérieur à 2 pour déterminer s&#39;il est premier:&quot;</span><span class="p">);</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">nombre</span> <span class="o">&lt;=</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// pour s&#39;assurer que le nombre est supérieur à 2</span>
+
+<span class="kt">boolean</span> <span class="n">trouvéDiviseur</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">nombre</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span> <span class="c1">// boucle pour chercher des diviseurs dans l&#39;intervalle [2, nombre/2]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">nombre</span><span class="o">%</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+        <span class="n">trouvéDiviseur</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="n">trouvéDiviseur</span><span class="p">){</span> <span class="c1">//le nombre est premier si on N&#39;a PAS trouvé de diviseur</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span> <span class="o">+</span> <span class="s">&quot; est premier&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span> <span class="o">+</span> <span class="s">&quot; n&#39;est pas premier&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Entrer un entier supérieur à 2 pour déterminer s&#39;il est premier:
+43
+43 est premier
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercice-7:-trouver-la-racine-enti&#232;re-d'un-nombre:">Exercice 7: trouver la racine enti&#232;re d'un nombre:<a class="anchor-link" href="#Exercice-7:-trouver-la-racine-enti&#232;re-d'un-nombre:">&#182;</a></h4><p>On veut trouver la racine carrée d'un nombre <em>n</em>, si elle est entière. Pour ceci, on va simplement parcourir l'intervalle [0, n] et tester chaque nombre pour voir si il donne <em>n</em> quand on l'élève au carré. Si et quand on trouve la racine, il faut garder cette valeur pour l'afficher à la fin, comme dans l'exemple 7 quand on trouve le multiple de 41. Si on ne trouve pas de racine entière, on affichera un message indiquant cela. Utiliser le squelette de code suivant comme point de départ.</p>
+<p><em>Solution</em> :</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="n">Scanner</span> <span class="n">clavier</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
@@ -13416,12 +13471,12 @@ Bonjour
 <span class="k">do</span> <span class="p">{</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrer un entier positif pour obtenir sa racine carrée:&quot;</span><span class="p">);</span>
     <span class="n">nombre</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">nombre</span> <span class="o">&lt;</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// pour s&#39;assurer que le nombre est positif</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">nombre</span> <span class="o">&lt;=</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// pour s&#39;assurer que le nombre est positif (strictement)</span>
 
 <span class="kt">int</span> <span class="n">racine</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">nombre</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span> <span class="c1">// boucle pour chercher la racine dans l&#39;intervalle [0, nombre]</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="o">==</span><span class="n">nombre</span><span class="p">){</span>
-        <span class="n">racine</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="n">racine</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="c1">// on enregistre la valeur</span>
         <span class="k">break</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -13450,6 +13505,241 @@ Bonjour
 <pre>Entrer un entier positif pour obtenir sa racine carrée:
 144
 La racine carrée du nombre est 12
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercice-8:-les-multiples-de-3-qui-se-terminent-par-1">Exercice 8: les multiples de 3 qui se terminent par 1<a class="anchor-link" href="#Exercice-8:-les-multiples-de-3-qui-se-terminent-par-1">&#182;</a></h4><p>On considère tous les multiples de 3 inférieurs à 10000. Combien d'entre eux se terminent par le chiffre 1?
+Pour le savoir, énumérer les multiples de 3 à l'aide d'une boucle (commencer à zéro et aller de 3 en 3) et compter ceux qui se terminent par le chiffre 1. Pour connaitre le chiffre des unités, utiliser l'opération modulo. Exemple: 438 % 10 = 8.</p>
+<p><em>Solution</em> :</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">compte</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">1000</span><span class="p">;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">){</span> <span class="c1">// énumérer les multiples de 3: 0, 3, 6, 9...</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="mi">10</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span>
+        <span class="n">compte</span> <span class="o">=</span> <span class="n">compte</span> <span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Il y a &quot;</span><span class="o">+</span><span class="n">compte</span><span class="o">+</span><span class="s">&quot; multiples de 3 inférieurs à 1000 qui se terminent par le chiffre 1&quot;</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Il y a 33 multiples de 3 inférieurs à 1000 qui se terminent par le chiffre 1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercice-9:-les-multiples-de-3-qui-se-terminent-par-1-(bis)">Exercice 9: les multiples de 3 qui se terminent par 1 (bis)<a class="anchor-link" href="#Exercice-9:-les-multiples-de-3-qui-se-terminent-par-1-(bis)">&#182;</a></h4><p>On considère toujours les multiples de 3 inférieurs à 10000. On voudrait savoir quelle <em>proportion</em> de ces nombres se termine par 1. Il faut maintenant compter les multiples de 3 et, à part, ceux qui se terminent par 1.</p>
+<p><em>Solution</em> :</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">compteMultiples</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">compte1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">1000</span><span class="p">;</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">){</span> <span class="c1">// énumérer les multiples de 3: 0, 3, 6, 9...</span>
+    <span class="n">compteMultiples</span> <span class="o">=</span> <span class="n">compteMultiples</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> 
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="mi">10</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span>
+        <span class="n">compte1</span> <span class="o">=</span> <span class="n">compte1</span> <span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//on a maintenant les deux totaux, on va les diviser pour obtenir la proportion</span>
+
+<span class="kt">double</span> <span class="n">proportion</span> <span class="o">=</span> <span class="n">compte1</span> <span class="o">*</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">compteMultiples</span><span class="p">;</span> <span class="c1">//1.0 pour faire une division exacte</span>
+<span class="n">proportion</span> <span class="o">=</span> <span class="n">proportion</span> <span class="o">*</span><span class="mi">100</span><span class="p">;</span> <span class="c1">// pourcentage</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Parmi les multiples de 3 inférieurs à 1000, %.0f%% d&#39;entre eux se terminent par le chiffre 1&quot;</span><span class="p">,</span><span class="n">proportion</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Parmi les multiples de 3 inférieurs à 1000, 10% d&#39;entre eux se terminent par le chiffre 1</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>java.io.PrintStream@648a8f38</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercice-10:-Nombres-parfaits">Exercice 10: Nombres parfaits<a class="anchor-link" href="#Exercice-10:-Nombres-parfaits">&#182;</a></h4><p>Un nombre est dit <em>parfait</em> s'il est égal à la somme de ses diviseurs propres (propres = le nombre lui-même exclu). 
+Par exemple, 6 est parfait: ses diviseurs propres sont 1,2, et 3, et 1+2+3=6.
+Remarquer qu'on inclut 1 comme diviseur.</p>
+<p>Comment déterminer si un nombre est parfait? On fait la somme de ses diviseurs et on compare avec le nombre lui-même.
+Pour cet exercice, on pourra adapter le code de l'exercice 6: au lieu de chercher un diviseur de <em>n</em>, cette fois on veut les lister tous et en faire la somme.</p>
+<p><strong>Attention</strong>: pour un nombre parfait, on inclut 1 dans la somme, il faut donc commencer la boucle à 1 et non pas à 2.</p>
+<p><em>Solution</em> :</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Scanner</span> <span class="n">clavier</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">nombre</span><span class="p">;</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrer un entier supérieur à 2 pour déterminer s&#39;il est parfait:&quot;</span><span class="p">);</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">nombre</span> <span class="o">&lt;=</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// pour s&#39;assurer que le nombre est supérieur à 2</span>
+
+<span class="kt">int</span> <span class="n">sommeDiviseurs</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//variable pour la somme des diviseurs</span>
+<span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">nombre</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span> <span class="c1">// boucle pour chercher des diviseurs dans l&#39;intervalle [1, nombre/2]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">nombre</span><span class="o">%</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+        <span class="n">sommeDiviseurs</span> <span class="o">=</span> <span class="n">sommeDiviseurs</span> <span class="o">+</span><span class="n">i</span><span class="p">;</span> <span class="c1">// on rajoute i à la somme des diviseurs</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">sommeDiviseurs</span> <span class="o">==</span> <span class="n">nombre</span><span class="p">){</span> <span class="c1">//définition d&#39;un nombre parfait</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span> <span class="o">+</span> <span class="s">&quot; est parfait&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span> <span class="o">+</span> <span class="s">&quot; n&#39;est pas parfait&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Entrer un entier supérieur à 2 pour déterminer s&#39;il est parfait:
+496
+496 est parfait
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercice-11:-Produit-des-diviseurs">Exercice 11: Produit des diviseurs<a class="anchor-link" href="#Exercice-11:-Produit-des-diviseurs">&#182;</a></h4><p>Sur le modèle de l'exercice 10, écrire du code pour calculer le <em>produit</em>  des diviseurs propres d'un nombre (lu au clavier).</p>
+<p>Note: ceci ne donne pas, en général, la décomposition du nombre en facteurs premiers.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Scanner</span> <span class="n">clavier</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">nombre</span><span class="p">;</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrer un entier supérieur à 2 pour calculer le produit de ses diviseurs propres:&quot;</span><span class="p">);</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">nombre</span> <span class="o">&lt;=</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// pour s&#39;assurer que le nombre est supérieur à 2</span>
+
+<span class="kt">int</span> <span class="n">produitDiviseurs</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//variable pour le produit des diviseurs: il faut l&#39;initialiser à 1 qui est l&#39;élément neutre de la multiplication</span>
+<span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">nombre</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span> <span class="c1">// boucle pour chercher des diviseurs dans l&#39;intervalle [1, nombre/2]</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">nombre</span><span class="o">%</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+        <span class="n">produitDiviseurs</span> <span class="o">=</span> <span class="n">produitDiviseurs</span> <span class="o">*</span><span class="n">i</span><span class="p">;</span> <span class="c1">// on multiplie le produit des diviseurs par i</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Le produit des diviseurs de &quot;</span><span class="o">+</span> <span class="n">nombre</span> <span class="o">+</span> <span class="s">&quot; vaut &quot;</span><span class="o">+</span> <span class="n">produitDiviseurs</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Entrer un entier supérieur à 2 pour calculer le produit de ses diviseurs propres:
+45
+Le produit des diviseurs de 45 vaut 2025
 </pre>
 </div>
 </div>

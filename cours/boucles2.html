@@ -13448,12 +13448,12 @@ Il faut initialiser <code>trouvé</code> à <code>false</code> (avant la boucle)
 <div class=" highlight hl-java"><pre><span></span><span class="n">Scanner</span> <span class="n">clavier</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
 <span class="kt">int</span> <span class="n">nombre</span><span class="p">;</span>
 <span class="k">do</span> <span class="p">{</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrer un entier positif pour déterminer s&#39;il est premier:&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Entrer un entier supérieur à 2 pour déterminer s&#39;il est premier:&quot;</span><span class="p">);</span>
     <span class="n">nombre</span> <span class="o">=</span> <span class="n">clavier</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-<span class="p">}</span> <span class="k">while</span> <span class="p">(...);</span> <span class="c1">// pour s&#39;assurer que le nombre est positif</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(...);</span> <span class="c1">// pour s&#39;assurer que le nombre est supérieur à 2</span>
 
 <span class="kt">boolean</span> <span class="n">trouvéDiviseur</span> <span class="o">=</span> <span class="p">...;</span>
-<span class="k">for</span> <span class="p">(</span> <span class="p">...</span> <span class="p">){</span> <span class="c1">// boucle pour chercher des diviseurs dans l&#39;intervalle [0, nombre/2]</span>
+<span class="k">for</span> <span class="p">(</span> <span class="p">...</span> <span class="p">){</span> <span class="c1">// boucle pour chercher des diviseurs dans l&#39;intervalle [2, nombre/2]</span>
     
 <span class="p">}</span>
 
@@ -13587,7 +13587,7 @@ Il faut initialiser <code>trouvé</code> à <code>false</code> (avant la boucle)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercice-7:-trouver-la-racine-enti&#232;re-d'un-nombre">Exercice 7: trouver la racine enti&#232;re d'un nombre<a class="anchor-link" href="#Exercice-7:-trouver-la-racine-enti&#232;re-d'un-nombre">&#182;</a></h4><p>On veut trouver la racine carrée d'un nombre <em>n</em>, si elle est entière. Pour ceci, on va simplement parcourir l'intervalle [0, n] et tester chaque nombre pour voir si il donne <em>n</em> quand on l'élève au carré. Si on ne trouve pas de racine entière, on affichera un message indiquant cela. Utiliser le squelette de code suivant comme point de départ:</p>
+<h4 id="Exercice-7:-trouver-la-racine-enti&#232;re-d'un-nombre">Exercice 7: trouver la racine enti&#232;re d'un nombre<a class="anchor-link" href="#Exercice-7:-trouver-la-racine-enti&#232;re-d'un-nombre">&#182;</a></h4><p>On veut trouver la racine carrée d'un nombre <em>n</em>, si elle est entière. Pour ceci, on va simplement parcourir l'intervalle [0, n] et tester chaque nombre pour voir si il donne <em>n</em> quand on l'élève au carré. Si et quand on trouve la racine, il faut garder cette valeur pour l'afficher à la fin, comme dans l'exemple 7 quand on trouve le multiple de 41. Si on ne trouve pas de racine entière, on affichera un message indiquant cela. Utiliser le squelette de code suivant comme point de départ:</p>
 
 </div>
 </div>
@@ -13811,6 +13811,7 @@ Par exemple, 6 est parfait: ses diviseurs propres sont 1,2, et 3, et 1+2+3=6.
 Remarquer qu'on inclut 1 comme diviseur.</p>
 <p>Comment déterminer si un nombre est parfait? On fait la somme de ses diviseurs et on compare avec le nombre lui-même.
 Pour cet exercice, on pourra adapter le code de l'exercice 6: au lieu de chercher un diviseur de <em>n</em>, cette fois on veut les lister tous et en faire la somme.</p>
+<p>Attention: pour un nombre parfait, on inclut 1 dans la somme, il faut donc commencer la boucle à 1 et non pas à 2.</p>
 
 </div>
 </div>
@@ -13924,7 +13925,7 @@ Pour cet exercice, on pourra adapter le code de l'exercice 6: au lieu de cherche
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Exercice-11:-Produit-des-diviseurs">Exercice 11: Produit des diviseurs<a class="anchor-link" href="#Exercice-11:-Produit-des-diviseurs">&#182;</a></h4><p>Sur le modèle de l'exercice 10, écrire du code pour calculer le <em>produit</em>  des diviseurs propres d'un nombre (lu au clavier).</p>
-<p>Note: ce ne donne pas, en général, la décomposition du nombre en facteurs premiers.</p>
+<p>Note: ceci ne donne pas, en général, la décomposition du nombre en facteurs premiers.</p>
 
 </div>
 </div>
