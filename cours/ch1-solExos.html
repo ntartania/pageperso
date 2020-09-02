@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>instructions1</title>
+<title>ch1-solExos</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13077,10 +13077,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Variables,-Instructions-et-s&#233;quences-d'instructions">Variables, Instructions et s&#233;quences d'instructions<a class="anchor-link" href="#Variables,-Instructions-et-s&#233;quences-d'instructions">&#182;</a></h1><p>Dans le notebook précedent on a utilisé l'utilitaire JShell comme une calculatrice. On peut ainsi résoudre des problèmes simples. Un langage de programmation comme Java permet d'aller beaucoup plus loin: on peut enregistrer des <em>séquences</em> de calculs et ainsi <em>automatiser</em> la résolution des problèmes.</p>
-<h2 id="Exemple-de-r&#233;solution-de-probl&#232;me">Exemple de r&#233;solution de probl&#232;me<a class="anchor-link" href="#Exemple-de-r&#233;solution-de-probl&#232;me">&#182;</a></h2><p>Prenons un exemple de problème simple. Le vainqueur du Marathon de New York en 2018 a couru la distance en 2h05'59". Quelle est sa vitesse moyenne?</p>
-<p>On va d'abord résoudre le problème façon "calculatrice". La vitesse se calcule en divisant la distance par le temps.</p>
-<p>Calculons d'abord le temps total en secondes (il y a 60 secondes par minute et 3600 secondes par heure):</p>
+<h1 id="Variables,-Instructions-et-s&#233;quences-d'instructions">Variables, Instructions et s&#233;quences d'instructions<a class="anchor-link" href="#Variables,-Instructions-et-s&#233;quences-d'instructions">&#182;</a></h1><h1 id="Solutions-des-exercices">Solutions des exercices<a class="anchor-link" href="#Solutions-des-exercices">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercice-1">Exercice 1<a class="anchor-link" href="#Exercice-1">&#182;</a></h4><p>Donner le type (<code>int</code> ou <code>double</code>) et la valeur des expressions suivantes:</p>
+<p><em>Solution</em>: toutes les expressions sont de type <code>double</code>. Les valeurs sont comme suit:</p>
 
 </div>
 </div>
@@ -13090,7 +13095,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="mi">2</span><span class="o">*</span><span class="mi">3600</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="mi">60</span> <span class="o">+</span> <span class="mi">59</span>
+<div class=" highlight hl-java"><pre><span></span><span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="mf">1.0</span>
 </pre></div>
 
     </div>
@@ -13109,7 +13114,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>7559</pre>
+<pre>3.0</pre>
 </div>
 
 </div>
@@ -13117,21 +13122,13 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>La distance d'un marathon est de 42.195km. Divisons la distance em mètres par le temps en secondes, ce qui nous donnera la vitesse en m/s:</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="mi">42195</span><span class="o">/</span><span class="mi">7559</span>
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
 </pre></div>
 
     </div>
@@ -13150,7 +13147,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>5</pre>
+<pre>2.0</pre>
 </div>
 
 </div>
@@ -13158,21 +13155,13 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Attention! on a fait une disivion entière! On essaye à nouveau en utilisant le type <code>double</code> pour un opérande:</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="mf">42195.0</span><span class="o">/</span><span class="mi">7559</span>
+<div class=" highlight hl-java"><pre><span></span><span class="mf">3.0</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">5</span>
 </pre></div>
 
     </div>
@@ -13191,7 +13180,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>5.5820875777219205</pre>
+<pre>13.0</pre>
 </div>
 
 </div>
@@ -13199,21 +13188,13 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Voilà qui est mieux. Pour finir, on va convertir le résultat en km/h, une unité plus familière. La conversion est: 1 m/s = 3.6km/h</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="mf">5.582</span> <span class="o">*</span> <span class="mf">3.6</span>
+<div class=" highlight hl-java"><pre><span></span><span class="mf">3.0</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13232,7 +13213,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>20.0952</pre>
+<pre>0.0</pre>
 </div>
 
 </div>
@@ -13240,30 +13221,36 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Et voilà le résultat final: <strong>la vitesse moyenne du vainqueur de la course est de 20.0952 km/h</strong>. Remarquer qu'on a perdu un peu de précision, parce qu'à l'étape précédente on n'a pas recopié tous les chiffres de la vitesse en m/s.</p>
-<h2 id="Automatiser-la-r&#233;solution-de-probl&#232;mes">Automatiser la r&#233;solution de probl&#232;mes<a class="anchor-link" href="#Automatiser-la-r&#233;solution-de-probl&#232;mes">&#182;</a></h2><p>Si on devait calculer ainsi la vitesse des autres coureurs (les 52,812 autres finissants!), un par un, on aurait bien du travail.</p>
-<p>Une bien meilleure solution est d'<em>automatiser</em> cette séquence de calculs. On peut représenter le problème avec trois entrées (les heures, minutes, secondes) et une sortie (le résultat). Ensuite on va représenter le cheminement de l'entrée à la sortie par une séquence de calculs écrits de manière abstraite, c'est à dire avec des <strong>variables</strong> à la place des nombres.</p>
-<h3 id="Variables,-d&#233;clarations,-affectations">Variables, d&#233;clarations, affectations<a class="anchor-link" href="#Variables,-d&#233;clarations,-affectations">&#182;</a></h3><p>Une <strong>variable</strong> est un <strong>nom</strong> qui représente une valeur dans un calcul. On peut choisir à peu près n'importe quel nom, et habituellement on prend des noms qui décrivent le sens de la valeur
-Une variable correspond à une petite case dans la mémoire de l'ordinateur, où on peut placer une valeur pour s'en resservir plus tard.</p>
-<p>En Java, chaque variable est associée à un <em>type</em>, et peut stocker des valeurs de ce type. Pour associer une variable à un type, on <em>déclare</em> la variable, en écrivant un type, et le nom de la variable. On termine la ligne avec le séparateur <code>;</code>.</p>
-<p>Par exemple, on peut déclarer une variable <code>compte</code> pour recevoir des valeurs entières, comme ceci:</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">compte</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="mf">4.0</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">4</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.5</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13271,7 +13258,8 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Pour l'instant on ne lui a pas encore donné une valeur: on peut lui donner une valeur en utilisant une <strong>affectation</strong>. Une affectation s'écrit en utilisant le symbole <code>=</code>. Par exemple, ici on va donner la valeur zéro à notre variable compte; on termine ensuite par un point-virgule.</p>
+<h4 id="Exercice-2">Exercice 2<a class="anchor-link" href="#Exercice-2">&#182;</a></h4><p>Donner le type (<code>int</code> ou <code>double</code>) et la valeur des expressions suivantes:</p>
+<p><em>Solution</em>: type <code>double</code> sauf la troisième, <code>int</code>. Valeurs ci-dessous.</p>
 
 </div>
 </div>
@@ -13281,49 +13269,73 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">compte</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="kt">double</span><span class="p">)</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>8.0</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On peut modifier la valeur de <code>compte</code>, en lui inscrivant une nouvelle valeur:</p>
+
+</div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">compte</span> <span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="kt">double</span><span class="p">)</span> <span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2.0</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On peut aussi utiliser la valeur de <code>compte</code> dans une expression, et l'expression sera calculée en remplaçant <code>compte</code> par sa valeur:</p>
+
+</div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="mi">2</span> <span class="o">*</span> <span class="n">compte</span> <span class="o">+</span> <span class="mi">3</span>
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="mf">5.0</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
 </pre></div>
 
     </div>
@@ -13342,7 +13354,7 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>7</pre>
+<pre>4</pre>
 </div>
 
 </div>
@@ -13350,24 +13362,36 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Enfin, on peut stocker dans une variable le résultat d'un calcul:</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">compte</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="mf">5.0</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mf">3.0</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6.0</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13375,7 +13399,8 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Souvent on réutilise la valeur courante d'une variable pour la modifier. Par exemple, au milieu d'un programme on ne sait pas forcément quel est la valeur actuelle de compte, mais on veut y rajouter 1. On écrit alors:</p>
+<h4 id="Exercice-3">Exercice 3<a class="anchor-link" href="#Exercice-3">&#182;</a></h4><p>Donner le type (<code>int</code>, <code>double</code>, ou <code>String</code>) et la valeur des expressions suivantes. Le cas échéant, indiquer quelles expressions sont invalides (causent une erreur).</p>
+<p><em>Solutions:</em> types <code>String</code> / erreur / <code>String</code> / erreur / <code>String</code></p>
 
 </div>
 </div>
@@ -13385,128 +13410,143 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">compte</span> <span class="o">=</span> <span class="n">compte</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="mi">3</span><span class="o">/</span><span class="mi">4</span> <span class="o">+</span> <span class="s">&quot; pommes&quot;</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0 pommes</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>En mathématiques ceci serait une absurdité. Mais une affectation n'est pas une équation mathématique: c'est une opération qui consiste à copier une <strong>valeur</strong> (la partie droite) dans une <strong>variable</strong> (la partie gauche). La partie gauche est toujours une variable, mais la partie droite peut être n'importe quelle expression qui peut être calculée et donner une valeur.</p>
+
+</div>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Calcul-de-la-vitesse-d'un-coureur">Calcul de la vitesse d'un coureur<a class="anchor-link" href="#Calcul-de-la-vitesse-d'un-coureur">&#182;</a></h3><p>On va maintenant reprendre l'exemple de résolution de problème ci-=dessus, en utilisant cette fois des variables. Pour l'instant on va continuer à utiliser le mode interactif de JShell, et on verra plus loin comment en faire un programme Java complet.</p>
-<p>Les instructions ci-dessus montrent que les calculs vont se faire avec des entiers <em>et</em> des décimaux. On devra donc déclarer des variables de type <code>int</code> et des variables de type <code>double</code>.</p>
-<p>On va commencer par déclarer trois variables pour les heures, minutes, secondes, ce sont des entiers et on utilise donc le type <code>int</code>:</p>
 
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">heures</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="mi">3</span> <span class="o">*</span> <span class="s">&quot;a&quot;</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">3 * &#34;a&#34;</span>
+<span class="ansi-red-intense-fg ansi-bold">bad operand types for binary operator &#39;*&#39;</span>
+<span class="ansi-red-intense-fg ansi-bold">  first type:  int</span>
+<span class="ansi-red-intense-fg ansi-bold">  second type: java.lang.String</span>
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On peut en fait déclarer plusieurs variables sur la même ligne, séparées par des virgules:</p>
+</div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">secondes</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="s">&quot;3&quot;</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>63</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Pour l'instant on n'a pas encore vu les entrées et sorties alors on va juste écrire les valeurs des variables directement dans le programme:</p>
+
+</div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">heures</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-<span class="n">minutes</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="n">secondes</span> <span class="o">=</span> <span class="mi">59</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="kt">double</span><span class="p">)</span> <span class="mi">3</span> <span class="o">/</span> <span class="s">&quot;2&quot;</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">(double) 3 / &#34;2&#34;</span>
+<span class="ansi-red-intense-fg ansi-bold">bad operand types for binary operator &#39;/&#39;</span>
+<span class="ansi-red-intense-fg ansi-bold">  first type:  double</span>
+<span class="ansi-red-intense-fg ansi-bold">  second type: java.lang.String</span>
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Cette instruction est une <em>affectation</em>, qui consiste à donner une valeur à une variable: la variable peut être vue comme une petite case dans la mémoire de l'ordinateur, et une affectation consiste à écrie une valeur dans cette case mémoire. Comme pour les déclarations, on termine chaque affectation par un <code>;</code>.</p>
-<p>On va maintenant calculer le temps total de course en secondes. Pour ceci on déclare une nouvelle variable <code>tempsTotal</code>, et on calcule sa valeur à partir du nombre d'heures, de minutes, et de secondes:</p>
+</div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">tempsTotal</span><span class="p">;</span>
-<span class="n">tempsTotal</span> <span class="o">=</span> <span class="mi">3600</span> <span class="o">*</span> <span class="n">heures</span> <span class="o">+</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="n">secondes</span><span class="p">;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>La première ligne est à nouveau une déclaration, la seconde est une affectation, dont la partie droite est une expression.</p>
-<p>On reconnait ici le calcul qu'on avait fait plus haut "façon calculatrice": ici on a remplacé les valeurs (heures, minutes, secondes) par des variables, et on stocke le résultat (le temps total) dans une nouvelle variable.</p>
-<p>Attention: l'affectation ici n'est pas une façon d'établir une correspondance entre les valeurs des différentes variables: on fait un calcul, et on écrit le résultat dans la case tempsTotal. Pour faire le calcul, toutes les variables sont remplacées par leurs valeurs.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">tempsTotal</span>
+<div class=" highlight hl-java"><pre><span></span><span class="s">&quot;4&quot;</span> <span class="o">+</span> <span class="s">&quot;2&quot;</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
 </pre></div>
 
     </div>
@@ -13519,235 +13559,13 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>7559</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Si on modifie les valeurs des variables <code>heures</code>, <code>minutes</code>, <code>secondes</code>, <code>tempsTotal</code> ne va <strong>pas</strong> être automatiquement recalculé (comme ce serait le cas avec une formule excel par exemple):</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">heures</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">tempsTotal</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>7559</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On a donc calculé le temps total de l'athlète en secondes. Comme précédemment on va maintenant diviser la distance parcourue (en mètres) par le temps (en secondes), pour calculer la vitesse (en m/s). On déclare une nouvelle variable <code>vitesseMS</code> (cette fois de type double, parce qu'on s'attend à ne pas avoir un nombre entier comme résultat) pour stocker le résultat.</p>
-<p>Remarquer ici comment la variable est déclarée sur la même ligne que le calcul, et la notation <code>.0</code> pour s'assurer que la division sera entière (il faut pour cela un opérande de type <code>double</code>):</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kt">double</span> <span class="n">vitesseMS</span> <span class="o">=</span> <span class="mf">42195.0</span> <span class="o">/</span> <span class="n">tempsTotal</span><span class="p">;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">vitesseMS</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>5.5820875777219205</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On retrouve le même résultat pour la vitesse en m/s, et à nouveau on la convertit en km/h:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kt">double</span> <span class="n">vitesseKMH</span> <span class="o">=</span> <span class="n">vitesseMS</span> <span class="o">*</span> <span class="mf">3.6</span><span class="p">;</span>
-<span class="n">vitesseKMH</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[20]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>20.095515279798914</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Nous sommes arrivés à nouveau au même résultat.</p>
-<p>À noter que le mode interactif nous permet d'écrire une expression ou le nom d'une variable et voir sa valeur affichée (après <code>Out[..]</code>).</p>
-<p>On peut en fait réunir toutes les lignes du calcul et en faire un <em>programme</em>:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">heures</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">secondes</span><span class="p">;</span>
-<span class="n">heures</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-<span class="n">minutes</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="n">secondes</span> <span class="o">=</span> <span class="mi">59</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="n">tempsTotal</span> <span class="o">=</span> <span class="mi">3600</span> <span class="o">*</span> <span class="n">heures</span> <span class="o">+</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="n">secondes</span><span class="p">;</span>
-<span class="kt">double</span> <span class="n">vitesseMS</span> <span class="o">=</span> <span class="mf">42195.0</span> <span class="o">/</span> <span class="n">tempsTotal</span><span class="p">;</span>
-<span class="kt">double</span> <span class="n">vitesseKMH</span> <span class="o">=</span> <span class="n">vitesseMS</span> <span class="o">*</span> <span class="mf">3.6</span><span class="p">;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On vérifie que le résultat est le même:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">vitesseKMH</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[22]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>20.095515279798914</pre>
+<pre>4212</pre>
 </div>
 
 </div>
@@ -13767,10 +13585,10 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span>
+<div class=" highlight hl-java"><pre><span></span><span class="kt">double</span> <span class="n">vitesse</span><span class="p">,</span> <span class="n">temps</span><span class="p">,</span> <span class="n">distance</span><span class="p">;</span> <span class="c1">// on pourrait aussi déclarer un entier pour le temps.</span>
 </pre></div>
 
     </div>
@@ -13788,10 +13606,11 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span>
+<div class=" highlight hl-java"><pre><span></span><span class="n">vitesse</span><span class="o">=</span> <span class="mf">11.3</span><span class="p">;</span>
+<span class="n">temps</span> <span class="o">=</span> <span class="mi">24</span><span class="p">;</span>
 </pre></div>
 
     </div>
@@ -13809,13 +13628,46 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span>
+<div class=" highlight hl-java"><pre><span></span><span class="n">distance</span> <span class="o">=</span> <span class="n">vitesse</span> <span class="o">*</span> <span class="n">temps</span><span class="p">;</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">distance</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>271.20000000000005</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13832,10 +13684,13 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span>
+<div class=" highlight hl-java"><pre><span></span><span class="kt">double</span> <span class="n">distanceTravail</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">nbjours</span> <span class="o">=</span> <span class="mi">22</span><span class="o">*</span><span class="mi">4</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">conso</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">prixEssence</span> <span class="o">=</span><span class="mf">1.2</span><span class="p">;</span>
 </pre></div>
 
     </div>
@@ -13853,10 +13708,10 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span>
+<div class=" highlight hl-java"><pre><span></span><span class="kt">double</span> <span class="n">distanceAnnuelle</span> <span class="o">=</span> <span class="n">nbjours</span> <span class="o">*</span> <span class="n">distanceTravail</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// un aller-retour chaque jour de travail</span>
 </pre></div>
 
     </div>
@@ -13874,10 +13729,10 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span>
+<div class=" highlight hl-java"><pre><span></span><span class="kt">double</span> <span class="n">consommation</span> <span class="o">=</span> <span class="n">distanceAnnuelle</span> <span class="o">/</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">conso</span><span class="p">;</span> <span class="c1">//conso litres pour chaque 100 km</span>
 </pre></div>
 
     </div>
@@ -13895,13 +13750,46 @@ Une variable correspond à une petite case dans la mémoire de l'ordinateur, où
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span>
+<div class=" highlight hl-java"><pre><span></span><span class="kt">double</span> <span class="n">coutEssence</span> <span class="o">=</span> <span class="n">consommation</span> <span class="o">*</span> <span class="n">prixEssence</span><span class="p">;</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">coutEssence</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>202.752</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
