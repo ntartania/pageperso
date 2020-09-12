@@ -13077,8 +13077,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Note:</strong>
+Le présent document est un <em>Jupyter Notebook</em>, un format interactif qui permet de combiner du code avec du texte.</p>
+<p>Il peut être visionné comme une page HTML ordinaire, ou "exécuté" à l'aide d'un serveur Jupyter: vous pouvez cliquer sur le lien en haut à droite pour lancer une session interactive sur la plate-forme infonuagique mybinder.</p>
+<p>Le but de ce format est d'expliquer la programmation et d'intercaler des exemples de code que les utilisateurs peuvent eux-même exécuter. Ici, le code présenté est du code Java, qui est exécuté à l'aide de l'interpréteur JShell. 
+Chaque case "In" contient un fragment de code, et la ligne "out" en-dessous affiche le résultat de l'exécution.</p>
+<p><strong>Attention!</strong> Il y a une différence entre la programmation interactive, où les résultats sont affichés comme sur une calculatrice, et la problématique d'afficher un résultat à l'écran en utilisant une instruction d'affichage (<code>System.out.println</code>).</p>
+<p>JShell, et le code présenté ici, nous affiche systématiquement la valeur des <em>expressions</em> qu'on insère dans les cases "In". Si ce qu'on entre n'est pas une expression, il n'y a pas de case "Out".</p>
 <h1 id="Types-et-Expressions-num&#233;riques">Types et Expressions num&#233;riques<a class="anchor-link" href="#Types-et-Expressions-num&#233;riques">&#182;</a></h1><p>En programmation on manipule de l'information principalement numérique, et on doit donc écrire des calculs en utilisant les opérateurs arithmétiques offerts par le langage qu'on utilise.</p>
-<p>On peut écrire des expressions directement avec des nombres, comme on ferait sur une calculatrice (note: ce format interactif utilise la console JShell et n'est pas la manière habituelle d'utiliser le langage Java):</p>
+<h2 id="Op&#233;rateurs-arithm&#233;tiques-de-base">Op&#233;rateurs arithm&#233;tiques de base<a class="anchor-link" href="#Op&#233;rateurs-arithm&#233;tiques-de-base">&#182;</a></h2><p>En Java, comme dans la plupart des langages, on peut écrire des expressions directement avec des nombres et les opérateurs arithmétiques de base: ces quatres opérateurs de base (addition, soustraction, multiplication et division) s'écrivent <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>. La sémantique des 3 premiers est la sémantique habituelle en mathématiques:</p>
 
 </div>
 </div>
@@ -13116,21 +13123,12 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>En Java, on utilise les symboles <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> pour les quatre opérations de base. La sémantique des 3 premiers est la sémantique habituelle en mathématiques, et pour la division, le résultat diffère selon si les opérandes sont entiers ou décimaux: une division entre deux entiers est la division entière, qui donne le quotient de la division. Pour obtenir le <em>reste</em> de la division, on utilise l'opération <em>modulo</em>, représentée par le symbole <code>%</code>.</p>
-<p><strong>Note</strong>: la distinction entre entiers et décimaux est très importante, et on y reviendra un peu plus loin.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="mf">1.5</span> <span class="o">/</span> <span class="mi">2</span>
+<div class=" highlight hl-java"><pre><span></span><span class="mi">6</span> <span class="o">-</span> <span class="mf">1.5</span>
 </pre></div>
 
     </div>
@@ -13149,7 +13147,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.75</pre>
+<pre>4.5</pre>
 </div>
 
 </div>
@@ -13163,7 +13161,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="mi">15</span> <span class="o">/</span> <span class="mi">2</span>
+<div class=" highlight hl-java"><pre><span></span><span class="mf">0.1</span> <span class="o">*</span> <span class="mi">15</span>
 </pre></div>
 
     </div>
@@ -13182,7 +13180,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>7</pre>
+<pre>1.5</pre>
 </div>
 
 </div>
@@ -13190,13 +13188,22 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Division-et-division-enti&#232;re">Division et division enti&#232;re<a class="anchor-link" href="#Division-et-division-enti&#232;re">&#182;</a></h2><p>Pour la division, le résultat diffère selon si les opérandes sont des nombres <em>entiers</em> ou <em>décimaux</em>.
+La distinction entre entiers et décimaux est très importante, et on y reviendra un peu plus loin. D'ici là, considérons que les nombres entiers sont ceux dont l'écriture de comporte pas le point décimal, et les nombres décimaux sont écrits avec un point décimal, même si la partie décimale vaut zéro: par exemple, <code>3</code> et <code>-8675</code> sont des nombres entiers, <code>3.0</code> et <code>8.4323</code> sont des décimaux.</p>
+<h3 id="Division-&quot;normale&quot;">Division "normale"<a class="anchor-link" href="#Division-&quot;normale&quot;">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="mi">15</span> <span class="o">%</span> <span class="mi">2</span>
+<div class=" highlight hl-java"><pre><span></span><span class="mf">4.5</span> <span class="o">/</span> <span class="mf">1.5</span>
 </pre></div>
 
     </div>
@@ -13215,7 +13222,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>1</pre>
+<pre>3.0</pre>
 </div>
 
 </div>
@@ -13223,22 +13230,13 @@ div#notebook {
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>La principale utilisation de l'opérateur modulo est pour déterminer si un nombre est multiple d'un autre.</p>
-<p>Par exemple: 205 est-il multiple de 41? 151 est-il multiple de 9?</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="mi">205</span> <span class="o">%</span> <span class="mi">41</span>
+<div class=" highlight hl-java"><pre><span></span><span class="mf">5.0</span> <span class="o">/</span> <span class="mf">2.0</span>
 </pre></div>
 
     </div>
@@ -13257,7 +13255,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0</pre>
+<pre>2.5</pre>
 </div>
 
 </div>
@@ -13269,7 +13267,9 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Le reste est zéro, donc 205 est multiple de 41.</p>
+<h3 id="Division-enti&#232;re-et-modulo">Division enti&#232;re et modulo<a class="anchor-link" href="#Division-enti&#232;re-et-modulo">&#182;</a></h3><p>une division entre deux entiers est la division entière, qui donne le <em>quotient</em> de la division (un nombre entier). Pour obtenir le <em>reste</em> de la division, on utilise l'opération <em>modulo</em>, représentée par le symbole <code>%</code>.</p>
+<p>Exemple: si on divise 22 par 5 en suivant la méthode de la division euclidienne (comme à l'école élémentaire), on obtient un quotient de 4 et un reste de 2: $22 = 4 \times 5 + 2$.</p>
+<p>En Java, on obtient le quotient (4) par l'opérateur <code>/</code>, et le reste (2) par l'opérateur <code>%</code> (modulo):</p>
 
 </div>
 </div>
@@ -13279,7 +13279,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="mi">151</span> <span class="o">%</span> <span class="mi">9</span>
+<div class=" highlight hl-java"><pre><span></span><span class="mi">22</span><span class="o">/</span><span class="mi">5</span>
 </pre></div>
 
     </div>
@@ -13298,6 +13298,287 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="mi">22</span><span class="o">%</span><span class="mi">5</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La division entière est une source d'erreurs fréquentes: on utilise fréquemment des fractions comme $1/2$ ou $4/3$ en oubliant que le résultat du calcul (en Java) donnera le quotient de la division au lieu du résultat exact:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="mi">4</span><span class="o">/</span><span class="mi">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La solution pour éviter ces erreurs est d'écrire (au moins) un des nombres sous forme décimale, c'est à dire suivi de <code>.0</code> s'il est entier:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="mf">4.0</span><span class="o">/</span><span class="mi">3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.3333333333333333</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Noter que l'expression ci-dessus combine des entiers et décimaux; la sémantique est alors celle des décimaux: en réalité Java a automatiquement converti le 3 en décimal pour obtenir une expression avec seulement des décimaux. On reviendra plus loin sur cette conversion automatique de types.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Modulo-et-multiples">Modulo et multiples<a class="anchor-link" href="#Modulo-et-multiples">&#182;</a></h3><p>Bien que l'opérateur modulo soit défini comme 'le reste de la division euclidienne', en pratique la principale utilisation de modulo est pour déterminer si un nombre est multiple d'un autre.</p>
+<p>Typiquement, on va vérifier qu'un nombre est pair (multiple de 2) en écrivant:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="mi">46</span><span class="o">%</span><span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Si le résultat est zéro, le premier nombre est multiple du deuxième, et donc dans ce cas 46 est pair.</p>
+<p>De même, on peut vérifier que 350 est multiple de 10 en écrivant:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="mi">250</span><span class="o">%</span><span class="mi">10</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ou à l'inverse on peut voir que 151 n'est pas multiple de 9:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="mi">151</span> <span class="o">%</span> <span class="mi">9</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
 <pre>7</pre>
 </div>
 
@@ -13310,15 +13591,43 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Le reste est différent de zéro, donc 151 n'est pas multiple de 9.</p>
-<p>On peut aussi écrire des expressions plus longues, utiliser des nombres négatifs, et grouper les opérations en utilisant des parenthèses:</p>
+<p>(le reste est différent de zéro, donc 151 n'est pas multiple de 9).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercice-1">Exercice 1<a class="anchor-link" href="#Exercice-1">&#182;</a></h4><p>Écrire une expression pour vérifier si 205 est multiple de 41.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Expressions-complexes,-parenth&#232;ses">Expressions complexes, parenth&#232;ses<a class="anchor-link" href="#Expressions-complexes,-parenth&#232;ses">&#182;</a></h2><p>Comme en mathématiques, on peut aussi écrire des expressions plus longues, utiliser des nombres négatifs, et grouper les opérations en utilisant des parenthèses:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="mf">12.8</span> <span class="o">+</span> <span class="mi">117</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="mf">3.5</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">47.5</span> <span class="o">-</span> <span class="mi">11</span><span class="p">)</span>
@@ -13334,7 +13643,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -13359,7 +13668,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">3</span>
@@ -13375,7 +13684,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13392,7 +13701,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
@@ -13408,7 +13717,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -13433,7 +13742,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="mi">12</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span>
@@ -13449,7 +13758,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -13474,7 +13783,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="mi">12</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
@@ -13490,7 +13799,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -13501,6 +13810,29 @@ div#notebook {
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercice-2">Exercice 2<a class="anchor-link" href="#Exercice-2">&#182;</a></h4><p>Écrire une expression Java équivalente à l'expression mathématique suivante:</p>
+<p>$\frac{32 - 8}{\frac{1}{2} \times 12}$</p>
+<p>Tester: le résultat doit valoir 4.0</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -13523,14 +13855,14 @@ virgule est décalée d'une position vers la gauche.</p>
 <p>De même, si on veut utiliser le type <code>float</code> (nombre à virgule codé sur 32 bits) on doit écrire le nombre suivi de la lettre f (minuscule). Exemple: <code>1.5f</code>.</p>
 <p>A noter que Java offre aussi des types de nombres entiers codés sur 8 ou 16 bits (<code>byte</code> et <code>short</code>). En général, la représentation "par défaut" avec les types <code>int</code> et <code>double</code> convient très bien, et on n'utilise les autres types numériques que de manière très ponctuelle (par exemple pour manipuler des grands nombres, ou pour économiser de la mémoire dans un système embarqué).</p>
 <p>Dans ce cours on utilisera toujours les types <code>int</code> et <code>double</code>, sauf exceptions.</p>
-<h4 id="Les-divisions">Les divisions<a class="anchor-link" href="#Les-divisions">&#182;</a></h4><p>Une des conséquences de la distinction entre entiers et décimaux est la distinction entre division entière et la division "exacte":</p>
+<h4 id="Les-divisions">Les divisions<a class="anchor-link" href="#Les-divisions">&#182;</a></h4><p>La distinction entre division entière et exacte est une conséquence de la différence de codage: l'opérateur <code>/</code> entre deux entiers est défini pour renvoyer un autre entier, et l'opérateur entre deux décimaux est défini pour retourner un décimal, ce qui permet d'utilisaer la définition "normale":</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span>
@@ -13546,7 +13878,7 @@ virgule est décalée d'une position vers la gauche.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -13563,7 +13895,7 @@ virgule est décalée d'une position vers la gauche.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="mf">3.0</span> <span class="o">/</span> <span class="mf">2.0</span>
@@ -13579,7 +13911,7 @@ virgule est décalée d'une position vers la gauche.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -13598,9 +13930,8 @@ virgule est décalée d'une position vers la gauche.</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>En mathématiques, ces deux expressions seraient équivalentes. Mais ici, on a des types différents et des opératiosn différentes. Le résultat est donc différent, en type <strong>et</strong> en valeur.</p>
-<p><strong>Note</strong>: La division entière est une importante source d'erreurs dans des programmes Java.</p>
 <h2 id="Conversion-de-types">Conversion de types<a class="anchor-link" href="#Conversion-de-types">&#182;</a></h2><p>La distinction entre entiers et décimaux crée des complications quand on veut combiner de nombres de types différents dans une une expression: le résultat est aussi une information qui doit être stockée en mémoire, elle doit donc avoir un type et une représentation.</p>
-<p>Chaque expression arithmétique est interprétée comme une séquence d'opérations binaires (à deux opérandes). Par exemple, l'addition 1 + 2 + 3 + 4 sera exécutée de gauche à droite, ce sera donc la somme de ((1 + 2) + 3 ) à laquelle on ajoutera 4. Par conséquent, le problème de combiner des types se fait toujours dans le contexte d'une opération binaire: on a toujours un opérateur, et deux opérandes qui peuvent être de types différents.</p>
+<p>Chaque expression arithmétique est interprétée comme une séquence d'opérations binaires (à deux opérandes). Par exemple, l'addition 1 + 2 + 3 + 4 sera exécutée de gauche à droite, ce sera donc la somme de (1 + 2), à laquelle on ajoutera 3, puis on ajoutera 4 au résultat. Par conséquent, le problème de combiner des types se fait toujours dans le contexte d'une opération binaire: on a toujours un opérateur, et deux opérandes qui peuvent être de types différents.</p>
 <p>Il y a alors deux questions à se poser: la première, est-ce que cette opération est bien définie pour les deux types en question? et deuxièmement, quel est le type du résultat?</p>
 <h3 id="Conversions-automatiques-de-types">Conversions automatiques de types<a class="anchor-link" href="#Conversions-automatiques-de-types">&#182;</a></h3><p>Les opérations arithmétiques de base <code>+</code>, <code>-</code>, et <code>*</code> sont bien définies, et de manière identique pour les entiers et les décimaux. On pourrait donc imaginer additionner directement les deux nombres.</p>
 <p>Mais en mémoire, ces deux nombres sont représentés différemment, et il faudrait voir comment le processeur pourra effectuer l'opération (par exemple une addition) sur deux nombres avec des codages binaires différents... et comment coder le résultat? autrement dit, quel sera le type du résultat?</p>
@@ -13617,7 +13948,7 @@ virgule est décalée d'une position vers la gauche.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="mf">1.0</span> <span class="o">+</span> <span class="mi">3</span>
@@ -13633,7 +13964,7 @@ virgule est décalée d'une position vers la gauche.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -13660,7 +13991,7 @@ virgule est décalée d'une position vers la gauche.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span>
@@ -13676,7 +14007,7 @@ virgule est décalée d'une position vers la gauche.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -13693,7 +14024,7 @@ virgule est décalée d'une position vers la gauche.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="mf">1.0</span> <span class="o">/</span> <span class="mi">2</span>
@@ -13709,7 +14040,7 @@ virgule est décalée d'une position vers la gauche.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -13726,7 +14057,7 @@ virgule est décalée d'une position vers la gauche.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="mi">1</span> <span class="o">/</span> <span class="mf">2.0</span>
@@ -13742,7 +14073,7 @@ virgule est décalée d'une position vers la gauche.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -13759,7 +14090,7 @@ virgule est décalée d'une position vers la gauche.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">-</span> <span class="mf">2.0</span><span class="p">)</span>
@@ -13775,7 +14106,7 @@ virgule est décalée d'une position vers la gauche.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -13800,7 +14131,7 @@ virgule est décalée d'une position vers la gauche.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="mi">7</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">2.0</span>
@@ -13816,7 +14147,7 @@ virgule est décalée d'une position vers la gauche.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -13833,7 +14164,7 @@ virgule est décalée d'une position vers la gauche.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="mf">2.0</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">/</span> <span class="mi">2</span>
@@ -13849,7 +14180,7 @@ virgule est décalée d'une position vers la gauche.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -13876,7 +14207,7 @@ virgule est décalée d'une position vers la gauche.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercice-1">Exercice 1<a class="anchor-link" href="#Exercice-1">&#182;</a></h4><p>Donner le type (<code>int</code> ou <code>double</code>) et la valeur des expressions suivantes:</p>
+<h4 id="Exercice-3">Exercice 3<a class="anchor-link" href="#Exercice-3">&#182;</a></h4><p>Donner le type (<code>int</code> ou <code>double</code>) et la valeur des expressions suivantes:</p>
 
 </div>
 </div>
@@ -14039,7 +14370,7 @@ virgule est décalée d'une position vers la gauche.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="p">((</span><span class="kt">double</span><span class="p">)</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
@@ -14055,7 +14386,7 @@ virgule est décalée d'une position vers la gauche.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -14080,7 +14411,7 @@ virgule est décalée d'une position vers la gauche.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="mf">4.3</span>
@@ -14096,7 +14427,7 @@ virgule est décalée d'une position vers la gauche.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -14196,7 +14527,7 @@ virgule est décalée d'une position vers la gauche.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercice-2">Exercice 2<a class="anchor-link" href="#Exercice-2">&#182;</a></h4><p>Donner le type (<code>int</code> ou <code>double</code>) et la valeur des expressions suivantes:</p>
+<h4 id="Exercice-4">Exercice 4<a class="anchor-link" href="#Exercice-4">&#182;</a></h4><p>Donner le type (<code>int</code> ou <code>double</code>) et la valeur des expressions suivantes:</p>
 
 </div>
 </div>

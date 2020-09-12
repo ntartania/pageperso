@@ -13090,10 +13090,217 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="sc">&#39;A&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[1]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>65</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ceci signifie que le caractère A majuscule est représenté en mémoire par le code 65, ou plutôt 01000001 en binaire (sur 8 bits).</p>
+<p>On peut aussi convertir dans l'autre sens: un nombre vers le caractère correspondant:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="kt">char</span><span class="p">)</span> <span class="mi">65</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>A</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Attention:</strong> les caractères qui représentent les chiffres n'ont pas la valeur associée au chiffre écrit:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="sc">&#39;3&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>51</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ici, 51 (ou 0110011 en binaire) est le code ASCII du caractère <code>'3'</code>, ce qui n'a rien à voir avec la valeur 3.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Op&#233;rations-sur-les-char">Op&#233;rations sur les <code>char</code><a class="anchor-link" href="#Op&#233;rations-sur-les-char">&#182;</a></h3><p>Contrairement aux types numériques, il n'y a pas vraiment d'opérations très utiles à faire sur des caractères: on peut les mettre côte-à-côte pour former du texte, mais cette opération est une opération du type <code>String</code> (voir ci-dessous).</p>
+<p>Cependant, comme il y a une conversion directe des caractères en nombres (et vice-versa), il est parfois utile de faire des opérations numériques sur les caractères. En réalité, les caractères sont alors automatiquement convertis en nombres et l'opération se fait sur les nombres -- le résultat n'est pas automatiquement re-converti en caractère.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="sc">&#39;A&#39;</span> <span class="o">+</span> <span class="sc">&#39;B&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>131</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On peut ainsi utiliser des additions pour décaler les lettres dans l'alphabet, il faut utiliser un <em>cast</em> pour revenir à une représentation par un caractère:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="sc">&#39;A&#39;</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>67</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="kt">char</span><span class="p">)</span> <span class="p">(</span><span class="sc">&#39;A&#39;</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13112,7 +13319,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>65</pre>
+<pre>C</pre>
 </div>
 
 </div>
@@ -13124,7 +13331,9 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>On peut aussi effectuer directement des opérations numériques sur les caractères, mais le résultat sera converti en un type numérique:</p>
+<h2 id="Les-cha&#238;nes-de-caract&#232;res:-le-type-String">Les cha&#238;nes de caract&#232;res: le type <code>String</code><a class="anchor-link" href="#Les-cha&#238;nes-de-caract&#232;res:-le-type-String">&#182;</a></h2><p>Les caractères sont assez peu utilisés tels quels en Java (et en programmation en général): on manipule plutôt des chaînes de caractères, qui sont simplement des séquences de <code>char</code>. Le type à utiliser pour une chaîne de caractères est le type <code>String</code>.</p>
+<p>Dans la suite du cours on utilisera souvent le terme "String" au lieu de "chaîne de caractère" pour alléger le texte.
+En Java, un <code>String</code> est représenté par le texte entre des quotes doubles <code>"</code>:</p>
 
 </div>
 </div>
@@ -13134,7 +13343,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="sc">&#39;A&#39;</span> <span class="o">+</span> <span class="sc">&#39;B&#39;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="s">&quot;bonjour&quot;</span>
 </pre></div>
 
     </div>
@@ -13153,172 +13362,6 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>131</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>On peut utiliser des additions pour décaler les lettres dans l'alphabet, et utiliser un cast pour revenir à une représentation par un caractère:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="sc">&#39;A&#39;</span> <span class="o">+</span> <span class="mi">2</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>67</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="kt">char</span><span class="p">)</span> <span class="p">(</span><span class="sc">&#39;A&#39;</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>C</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Attention: les caractères qui représentent les chiffres n'ont pas la valeur associée au chiffre écrit:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="sc">&#39;3&#39;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>51</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Ici, 51 est le code ASCII du caractère <code>'3'</code>, ce qui n'a rien à voir avec la valeur 3.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Les-cha&#238;nes-de-caract&#232;res:-le-type-String">Les cha&#238;nes de caract&#232;res: le type <code>String</code><a class="anchor-link" href="#Les-cha&#238;nes-de-caract&#232;res:-le-type-String">&#182;</a></h2><p>Les caractères sont assez peu utilisés tels quels en Java (et en programmation en général): on manipule plutôt des chaînes de caractères, qui sont simplement des séquences de <code>char</code>. Le type à utiliser pour une chaîne de caractères est le type <code>String</code>.</p>
-<p>Dans la suite du cours on utilisera souvent ce terme au lieu de "chaîne de caractère" pour alléger le texte.
-Un <code>String</code> est représenté par le texte entre des quotes doubles <code>"</code>:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="s">&quot;bonjour&quot;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[13]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
 <pre>bonjour</pre>
 </div>
 
@@ -13331,14 +13374,15 @@ Un <code>String</code> est représenté par le texte entre des quotes doubles <c
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La seule opération qu'on peut réaliser pour combiner deux String est la <em>concaténation</em>, qui utilise le symbole <code>+</code>: cette opération consiste simplement à mettre les deux String bout à bout et obtenir un nouveau String:</p>
+<p>Les doubles cotes sont nécessaires pour que Java ne cherche pas à interpréter le texte comme des instructions Java.</p>
+<h3 id="Op&#233;rations-sur-les-String">Op&#233;rations sur les <code>String</code><a class="anchor-link" href="#Op&#233;rations-sur-les-String">&#182;</a></h3><p>La seule opération qu'on peut réaliser pour combiner deux String est la <em>concaténation</em>, qui utilise le symbole <code>+</code>: cette opération consiste simplement à mettre les deux String bout à bout et obtenir un nouveau String:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="s">&quot;bon&quot;</span> <span class="o">+</span> <span class="s">&quot;jour&quot;</span>
@@ -13354,7 +13398,7 @@ Un <code>String</code> est représenté par le texte entre des quotes doubles <c
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13379,7 +13423,7 @@ Un <code>String</code> est représenté par le texte entre des quotes doubles <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="s">&quot;la&quot;</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="s">&quot;petite&quot;</span><span class="o">+</span> <span class="s">&quot; chèvre&quot;</span>
@@ -13395,7 +13439,7 @@ Un <code>String</code> est représenté par le texte entre des quotes doubles <c
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -13420,7 +13464,7 @@ Un <code>String</code> est représenté par le texte entre des quotes doubles <c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="s">&quot;bonjour, \npetite chèvre!&quot;</span>
@@ -13436,7 +13480,7 @@ Un <code>String</code> est représenté par le texte entre des quotes doubles <c
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -13462,7 +13506,7 @@ petite chèvre!</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="s">&quot;Je m&#39;appelle \&quot;Biquette\&quot; et je suis une chèvre naine Afghane.&quot;</span>
@@ -13478,7 +13522,7 @@ petite chèvre!</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -13495,7 +13539,7 @@ petite chèvre!</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="s">&quot;Le retour à la ligne s&#39;écrit \&quot;\\n\&quot;&quot;</span>
@@ -13511,7 +13555,7 @@ petite chèvre!</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -13529,6 +13573,31 @@ petite chèvre!</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercice-5">Exercice 5<a class="anchor-link" href="#Exercice-5">&#182;</a></h4><p>Écrire un String (un seul) qui s'affichera comme ceci, sur plusieurs lignes et avec les double quotes:</p>
+
+<pre><code>A - "alpha"
+B - "bravo"
+C - "charlie"</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Conversion-entre-nombres-et-chaines-de-caract&#232;res">Conversion entre nombres et chaines de caract&#232;res<a class="anchor-link" href="#Conversion-entre-nombres-et-chaines-de-caract&#232;res">&#182;</a></h3><p>Comme on l'a indiqué plus haut, la valeur numérique d'un chiffre n'a absolument rien à voir avec le caractère qui représente ce chiffre: par exemple <code>'3'</code> est le caractère 51. De même, la séquence des caractères 51, 49 et 54, soit le String <code>"316"</code> n'a pas grand chose à voir avec les codes de ces caractères...</p>
 <p>De manière générale, les informations numériques n'ont rien à voir avec les informations "textuelles", et ne peuvent être combinées. Cependant, il est utile de convertir entre les deux types d'informations, pour afficher des informations numériques à l'écran (sous forme de caractères) ou pour lire au clavier une donnée numérique (faire le lien entre les caractères tapés au clavier et une valeur numérique en base 10).</p>
 <p>Java fournit des mécanismes pour passer de l'un à l'autre. La conversion de nombre vers String se fait automatiquement quand on insère un nombre dans une chaîne de caractères, et nous verrons les mécanismes inverses lorsque nous verrons les entrées et sorties.</p>
@@ -13539,7 +13608,7 @@ petite chèvre!</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="s">&quot;Les bêtes de ce troupeau ont en moyenne &quot;</span> <span class="o">+</span> <span class="mi">84</span> <span class="o">/</span> <span class="mi">21</span> <span class="o">+</span> <span class="s">&quot; pattes.&quot;</span>
@@ -13555,7 +13624,7 @@ petite chèvre!</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -13582,7 +13651,7 @@ petite chèvre!</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="s">&quot;J&#39;ai &quot;</span><span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="s">&quot; pommes.&quot;</span>
@@ -13598,7 +13667,7 @@ petite chèvre!</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -13623,7 +13692,7 @@ petite chèvre!</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="s">&quot; pommes suffisent pour cette tarte.&quot;</span>
@@ -13639,7 +13708,7 @@ petite chèvre!</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13666,7 +13735,7 @@ petite chèvre!</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercice-3">Exercice 3<a class="anchor-link" href="#Exercice-3">&#182;</a></h3><p>Donner le type (<code>int</code>, <code>double</code>, ou <code>String</code>) et la valeur des expressions suivantes. Le cas échéant, indiquer quelles expressions sont invalides (causent une erreur).</p>
+<h4 id="Exercice-6">Exercice 6<a class="anchor-link" href="#Exercice-6">&#182;</a></h4><p>Donner le type (<code>int</code>, <code>double</code>, ou <code>String</code>) et la valeur des expressions suivantes. Le cas échéant, indiquer quelles expressions sont invalides (causent une erreur).</p>
 
 </div>
 </div>
