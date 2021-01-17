@@ -13078,8 +13078,9 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Variables,-Instructions-et-s&#233;quences-d'instructions">Variables, Instructions et s&#233;quences d'instructions<a class="anchor-link" href="#Variables,-Instructions-et-s&#233;quences-d'instructions">&#182;</a></h1><p>Dans le notebook précedent on a utilisé l'utilitaire JShell comme une calculatrice. On peut ainsi résoudre des problèmes simples. Un langage de programmation comme Java permet d'aller beaucoup plus loin: on peut enregistrer des <em>séquences</em> de calculs et ainsi <em>automatiser</em> la résolution des problèmes.</p>
-<h2 id="Exemple-de-r&#233;solution-de-probl&#232;me">Exemple de r&#233;solution de probl&#232;me<a class="anchor-link" href="#Exemple-de-r&#233;solution-de-probl&#232;me">&#182;</a></h2><p>Prenons un exemple de problème simple. Le vainqueur du Marathon de New York en 2018 a couru la distance en 2h05'59". Quelle est sa vitesse moyenne?</p>
-<p>On va d'abord résoudre le problème façon "calculatrice". La vitesse se calcule en divisant la distance par le temps.</p>
+<h2 id="Exemple-de-r&#233;solution-de-probl&#232;me">Exemple de r&#233;solution de probl&#232;me<a class="anchor-link" href="#Exemple-de-r&#233;solution-de-probl&#232;me">&#182;</a></h2><p>Prenons un exemple de problème simple. Le vainqueur du Marathon de New York en 2018 a couru la distance (42.195km) en 2h05'59". Quelle est sa vitesse moyenne?</p>
+<p>On va d'abord résoudre le problème façon "calculatrice". La vitesse se calcule en divisant la distance par le temps.
+Ici, on a un temps en heures, minutes, secondes, ce qui ne nous permet p as d'appliquer directement la formule: il faut d'abord convertir le temps en une seule unité. Ici, on va exprimer le temps total en secondes, la distance en mètres, et calculer la vistesse en m/s. On pourra ensuite multiplier le résultat par 3.6 pour obtenir la vitesse en km/h.</p>
 <p>Calculons d'abord le temps total (2 heures, 5 minutes, 59 secondes) en secondes (il y a 60 secondes par minute et 3600 secondes par heure):</p>
 
 </div>
@@ -13162,7 +13163,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Attention!</strong> C'est bizarre que ça tombe juste à 5 m/s... là on se rend compte qu'on on a fait une division entière! On essaye à nouveau en utilisant le type <code>double</code> pour un opérande:</p>
+<p><strong>Attention!</strong> C'est bizarre que ça tombe juste à 5 m/s... là on se rend compte qu'on on a fait une division entière! On essaye à nouveau en rajoutant <code>.0</code> à l'écriture d'un opérande, pour que la division soit exacte:</p>
 
 </div>
 </div>
@@ -13248,7 +13249,7 @@ div#notebook {
 <h2 id="Automatiser-la-r&#233;solution-de-probl&#232;mes">Automatiser la r&#233;solution de probl&#232;mes<a class="anchor-link" href="#Automatiser-la-r&#233;solution-de-probl&#232;mes">&#182;</a></h2><p>Si on devait calculer ainsi la vitesse des autres coureurs (les 52,812 autres finissants!), un par un, on aurait bien du travail.</p>
 <p>Une bien meilleure solution est d'<em>automatiser</em> cette séquence de calculs. On peut représenter le problème avec trois entrées (les heures, minutes, secondes) et une sortie (le résultat). Ensuite on va représenter le cheminement de l'entrée à la sortie par une séquence de calculs écrits de manière <strong>abstraite</strong>, c'est à dire avec des <strong>variables</strong> à la place des nombres.</p>
 <h3 id="Variables,-d&#233;clarations,-affectations">Variables, d&#233;clarations, affectations<a class="anchor-link" href="#Variables,-d&#233;clarations,-affectations">&#182;</a></h3><p>Une <strong>variable</strong> est un <strong>nom</strong> qui représente une valeur dans un calcul. Autrement dit, la variable est une référence à une petite case dans la mémoire de l'ordinateur, où on peut placer une valeur pour s'en resservir plus tard.</p>
-<p>En Java, avant d'utiliser une variable, il faut annoncer quel sera le type de l'information contenu dans la case mémoire (pour que le système crée une case de la bonne taille pour stocker l'information). Chaque variable est donc associée à un <em>type</em>, et peut stocker des valeurs de ce type. Pour associer une variable à un type, on <em>déclare</em> la variable, en écrivant un type, et le nom de la variable. On termine la ligne avec le séparateur <code>;</code>.</p>
+<p>En Java, avant d'utiliser une variable, il faut la <em>déclarer</em>, c'est à dire annoncer quel sera le type de l'information contenu dans la case mémoire (pour que le système crée une case de la bonne taille pour stocker l'information). Chaque variable est donc associée à un <em>type</em>, et peut stocker des valeurs de ce type. Pour associer une variable à un type, on <em>déclare</em> la variable, en écrivant un type, et le nom de la variable. On termine la ligne avec le séparateur <code>;</code>.</p>
 <p>Par exemple, on peut déclarer une variable <code>compte</code> pour recevoir des valeurs entières (du type <code>int</code>), comme ceci:</p>
 
 </div>
@@ -13485,7 +13486,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercice-7">Exercice 7<a class="anchor-link" href="#Exercice-7">&#182;</a></h4><p>Déclarer des variables <code>nom</code>, <code>age</code>, <code>taille</code>, avec les types appropriés pour contenir les informations correspondante: l'age est une valeur entière, le nom une chaine de caractères, et la taille une valeur décimale.</p>
+<h4 id="Exercice-8">Exercice 8<a class="anchor-link" href="#Exercice-8">&#182;</a></h4><p>Déclarer des variables <code>nom</code>, <code>age</code>, <code>taille</code>, avec les types appropriés pour contenir les informations correspondante: l'age est une valeur entière, le nom une chaine de caractères, et la taille une valeur décimale.</p>
 
 </div>
 </div>
@@ -13527,7 +13528,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Calcul-de-la-vitesse-d'un-coureur">Calcul de la vitesse d'un coureur<a class="anchor-link" href="#Calcul-de-la-vitesse-d'un-coureur">&#182;</a></h3><p>On va maintenant reprendre l'exemple de résolution de problème ci-=dessus, en utilisant cette fois des variables. Pour l'instant on va continuer à utiliser le mode interactif de JShell, et on verra plus loin comment en faire un programme Java complet.</p>
+<h3 id="Calcul-de-la-vitesse-d'un-coureur">Calcul de la vitesse d'un coureur<a class="anchor-link" href="#Calcul-de-la-vitesse-d'un-coureur">&#182;</a></h3><p>On va maintenant reprendre l'exemple de résolution de problème ci-dessus, en utilisant cette fois des variables. Pour l'instant on va continuer à utiliser le mode interactif de JShell, et on verra plus loin comment en faire un programme Java complet.</p>
 <p>Les instructions ci-dessus montrent que les calculs vont se faire avec des entiers <em>et</em> des décimaux. On devra donc déclarer des variables de type <code>int</code> et des variables de type <code>double</code>.</p>
 <p>On va commencer par déclarer trois variables pour les heures, minutes, secondes, ce sont des entiers et on utilise donc le type <code>int</code>:</p>
 
